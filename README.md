@@ -17,7 +17,7 @@ Here are some ideas to get you started:
 <p align="center">
   <img src="https://media3.giphy.com/media/ln7z2eWriiQAllfVcn/200w.webp" width="100">
   <img src="https://i.giphy.com/media/LMt9638dO8dftAjtco/200.webp" width="100">
-  <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fsampastoriza.com%2F&psig=AOvVaw3vJA8W2HjjA7-pfjKT85Ux&ust=1673878709867000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNCmtKHiyfwCFQAAAAAdAAAAABAe" width="100">
+  <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fgithub.com%2FAnilNITT%2FPyTorch-for-beginner&psig=AOvVaw3RcLZBe2sCg6duCcJUXa0e&ust=1673878868670000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCJiwwuziyfwCFQAAAAAdAAAAABAD" width="100">
 <!--   <img src="https://i.giphy.com/media/eNAsjO55tPbgaor7ma/200w.webp" width="100">
   <img src="https://i.giphy.com/media/VgGthkhUvGgOit7Y9i/200.webp" width="100">
   <img src="https://media3.giphy.com/media/kdFc8fubgS31b8DsVu/giphy.webp" width="100"> -->
