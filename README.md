@@ -6,7 +6,7 @@
 
 Here are some ideas to get you started:
 
-- 🔭 I’m currently working on **UTE-AI-Lab**
+- 🔭 I’m currently working on [**UTE-AI-Lab**](https://www.facebook.com/groups/1015789475526341)
 - 🌱 I’m currently learning **AI, MLOps, Embedded Systems**
 - 👯 I’m looking to collaborate on those who are really into AI fields
 - 🤔 I’m looking for help with frameworks which are useful for my project
