@@ -30,6 +30,6 @@ Here are some ideas to get you started:
   <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="pytorch" width="60"/>
   <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="60"/>
   <img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" alt="opencv" width="60"/>
-  <img src="[![image](https://user-images.githubusercontent.com/86679402/212733006-c3877780-63b4-4b34-a18b-b1649e019344.png)](https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png)" alt="opencv" width="60"/>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1024px-Amazon_Web_Services_Logo.svg" alt="aws" width="60"/>
 </p>
 
