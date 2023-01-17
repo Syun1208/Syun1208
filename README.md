@@ -9,7 +9,7 @@ Here are some ideas to get you started:
 - 🔭 I’m currently working on [**UTE-AI-Lab**](https://www.facebook.com/groups/1015789475526341)
 - 🌱 I’m currently learning **AI, MLOps, Embedded Systems**
 - 👯 I’m looking to collaborate on those who are really into AI fields
-- 🤔 I’m looking for help with frameworks which are useful for my project
+- 🤔 I’m looking for frameworks which are useful for my project
 - 💬 Ask me about the questions related to AI fields or IELTS
 - 📫 How to reach me: [Facebook](https://www.facebook.com/syun128/) or [LinkedIn](https://www.linkedin.com/in/syun-cet/?fbclid=IwAR0WhS80pkWRJwtYZv3kEu4UmYWt8BDtKpfl9NclTHE-APnmbNbExiNg-kc)
 - 😄 Pronouns: English, VietNamese
