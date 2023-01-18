@@ -23,7 +23,7 @@ Here are some ideas to get you started:
 - 👯 I’m looking to collaborate on those who are really into AI fields
 - 🤔 I’m looking for frameworks which are useful for my project
 - 💬 Ask me about the questions related to AI fields or IELTS
-- 📫 How to reach me: [Facebook](https://www.facebook.com/syun128/) or [LinkedIn](https://www.linkedin.com/in/syun-cet/?fbclid=IwAR0WhS80pkWRJwtYZv3kEu4UmYWt8BDtKpfl9NclTHE-APnmbNbExiNg-kc)
+- 📫 How to reach me: [***Facebook***](https://www.facebook.com/syun128/) or [***LinkedIn***](https://www.linkedin.com/in/syun-cet/?fbclid=IwAR0WhS80pkWRJwtYZv3kEu4UmYWt8BDtKpfl9NclTHE-APnmbNbExiNg-kc)
 - 😄 Pronouns: English, VietNamese
 - ⚡ Fun fact: I don't have vilid logic for programming 😄
 - 👩‍💻 Tuitorial: [***My Youtube channel***](https://www.youtube.com/c/SyunEngineerChannel)
