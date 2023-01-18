@@ -26,7 +26,7 @@ Here are some ideas to get you started:
 - 📫 How to reach me: [Facebook](https://www.facebook.com/syun128/) or [LinkedIn](https://www.linkedin.com/in/syun-cet/?fbclid=IwAR0WhS80pkWRJwtYZv3kEu4UmYWt8BDtKpfl9NclTHE-APnmbNbExiNg-kc)
 - 😄 Pronouns: English, VietNamese
 - ⚡ Fun fact: I don't have vilid logic for programming 😄
-- :yt:
+- 👩‍💻 Tuitorial: [***My Youtube channel***](https://www.youtube.com/c/SyunEngineerChannel)
 
 <h3 align="left">Languages and Tools:</h3>
 <p align="center">
