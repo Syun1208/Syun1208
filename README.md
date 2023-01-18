@@ -2,7 +2,7 @@
 
 # ✨ I'm an AI Engineer ✨
 
-<img align="center" src="https://github.com/abhisheknaiidu/abhisheknaiidu/blob/master/code.gif?raw=true" width="10000" height="500" />
+<img align="center" src="https://github.com/abhisheknaiidu/abhisheknaiidu/blob/master/code.gif?raw=true" width="10000" height="550" />
 
 <!-- **Syun1208/Syun1208** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile. -->
 
