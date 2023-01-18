@@ -1,17 +1,17 @@
 ## Hi 👋
 
-<p align="center">
+<!-- <p align="center">
   <img src='https://github.com/mayankchaudhary26/Cool-Readme-ideas/blob/master/data/octocat/ironcat.jpg' width='100"'>
   <img src='https://github.com/mayankchaudhary26/Cool-Readme-ideas/blob/master/data/octocat/minion.png' width='100"'>
   <img src='https://github.com/mayankchaudhary26/Cool-Readme-ideas/blob/master/data/octocat/spidertocat.png' width='100"'>
   <img src='https://github.com/mayankchaudhary26/Cool-Readme-ideas/blob/master/data/octocat/droidtocat.png' width='100"'>
 <br>
-</p>
+</p> -->
 
 # ✨ I'm an AI Engineer ✨
 
 <p align="center">
-<img align="center" src="https://github.com/abhisheknaiidu/abhisheknaiidu/blob/master/code.gif?raw=true" width="10000" height="550" />
+<img align="center" src="https://github.com/abhisheknaiidu/abhisheknaiidu/blob/master/code.gif?raw=true" width="1000" height="550" />
 </p>
 
 <!-- **Syun1208/Syun1208** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile. -->
