@@ -16,7 +16,7 @@
 
 <!-- **Syun1208/Syun1208** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile. -->
 
-Here are some ideas to get you started:
+Here are some informations related to me:
 
 - 🔭 I’m currently working on [**UTE-AI-Lab**](https://www.facebook.com/groups/1015789475526341)
 - 🌱 I’m currently learning **AI, MLOps, Embedded Systems, and Blockchain**
