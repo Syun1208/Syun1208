@@ -1,6 +1,7 @@
 ## Hi 👋
-<img align='center' src='https://github.com/mayankchaudhary26/Cool-Readme-ideas/blob/master/data/octocat/ironcat.jpg' width='100"'>
-
+<p align="center">
+<img src='https://github.com/mayankchaudhary26/Cool-Readme-ideas/blob/master/data/octocat/ironcat.jpg' width='100"'>
+</p>
 # ✨ I'm an AI Engineer ✨
 
 <img align="center" src="https://github.com/abhisheknaiidu/abhisheknaiidu/blob/master/code.gif?raw=true" width="10000" height="550" />
