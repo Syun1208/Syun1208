@@ -1,5 +1,5 @@
 ## Hi 👋
-<img align='center' src='https://github.com/mayankchaudhary26/Cool-Readme-ideas/blob/master/data/octocat/ironcat.jpg' width='300"'>
+<img align='center' src='https://github.com/mayankchaudhary26/Cool-Readme-ideas/blob/master/data/octocat/ironcat.jpg' width='100"'>
 
 # ✨ I'm an AI Engineer ✨
 
