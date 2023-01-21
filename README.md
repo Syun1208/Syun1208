@@ -46,5 +46,5 @@ Here are some informations related to me:
 
 </p>
 
-<img align='center' src='https://github.com/mayankchaudhary26/mayankchaudhary26/blob/output/github-contribution-grid-snake.gif' width='900"'>
+<img align='center' src='https://github.com/tondrejk/tondrejk/blob/main/contributions.svg' width='900"'>
 
