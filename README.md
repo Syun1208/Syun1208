@@ -23,7 +23,7 @@ Here are some informations related to me:
 - 👯 I’m looking to collaborate on those who are really into AI fields
 - 🤔 I’m looking for frameworks which are useful for my project
 - 💬 Ask me about the questions related to AI fields or IELTS
-- 📫 How to reach me: [***Facebook***](https://www.facebook.com/syun128/) or [***LinkedIn***](https://www.linkedin.com/in/syun-cet/?fbclid=IwAR0WhS80pkWRJwtYZv3kEu4UmYWt8BDtKpfl9NclTHE-APnmbNbExiNg-kc)
+- 📫 How to reach me: [***Facebook***](https://www.facebook.com/syun128/) or [***LinkedIn***](https://www.linkedin.com/in/syun-cet/)
 - 😄 Pronouns: English, VietNamese
 - ⚡ Fun fact: I don't have vilid logic for programming 😄
 - 👩‍💻 Tuitorial: [***My Youtube channel***](https://www.youtube.com/c/SyunEngineerChannel)
@@ -48,3 +48,16 @@ Here are some informations related to me:
 
 <img align='center' src='https://github.com/tondrejk/tondrejk/blob/main/contributions.svg' width='900"'>
 
+[youtube]: https://www.youtube.com/c/SyunEngineerChannel
+[facebook]: https://www.facebook.com/syun128/
+[instagram]: https://www.instagram.com/syun12_8/
+[linkedin]: https://www.linkedin.com/in/syun-cet/
+
+---
+
+## Connect With Me:
+
+[<img align="left" alt="codeSTACKr.com" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][facebook]
+[<img align="left" alt="codeSTACKr | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
+[<img align="left" alt="codeSTACKr | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
+[<img align="left" alt="codeSTACKr | LinkedIn" width="22px" src="https://www.edigitalagency.com.au/wp-content/uploads/new-linkedin-logo-white-black-png.png" />][linkedin]
