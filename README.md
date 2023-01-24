@@ -28,7 +28,8 @@ Here are some informations related to me:
 - ⚡ Fun fact: I don't have vilid logic for programming 😄
 - 👩‍💻 Tuitorial: [***My Youtube channel***](https://www.youtube.com/c/SyunEngineerChannel)
 
-<h3 align="left">Languages and Tools:</h3>
+<!-- <h3 align="left">Languages and Tools:</h3> -->
+## Languages and Tools:
 <p align="center">
   <img src="https://media3.giphy.com/media/ln7z2eWriiQAllfVcn/200w.webp" width="60">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="60"/>
