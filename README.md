@@ -53,7 +53,7 @@ Here are some informations related to me:
 [facebook]: https://www.facebook.com/syun128/
 [instagram]: https://www.instagram.com/syun12_8/
 [linkedin]: https://www.linkedin.com/in/syun-cet/
-[gmail]: phamlong12082001@gmail.com
+[gmail]: https://phamlong12082001@gmail.com
 
 ---
 
