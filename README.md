@@ -19,7 +19,7 @@
 Here are some informations related to me:
 
 - 🔭 I’m currently working on [**UTE-AI-Lab**](https://www.facebook.com/groups/1015789475526341)
-- 🌱 I’m currently learning **AI, MLOps, Embedded Systems, and Blockchain**
+- 🌱 I’m currently learning **AI, MLOps, Embedded Systems, and Cloud Computing**
 - 👯 I’m looking to collaborate on those who are really into AI fields
 - 🤔 I’m looking for frameworks which are useful for my project
 - 💬 Ask me about the questions related to AI fields or IELTS
