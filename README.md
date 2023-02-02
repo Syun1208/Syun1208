@@ -57,6 +57,8 @@ Here are some informations related to me:
 [linkedin]: https://www.linkedin.com/in/syun-cet/
 [gmail]: https://phamlong12082001@gmail.com
 
+<!--## <img src="https://camo.githubusercontent.com/de4126dd5395c2fb600da5d41aa142767bd97d7e14fbe15a75140ef024ec13de/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f636a3837437866527472556966463352796b2f67697068792e676966" width="42px">&nbsp; My Github Stats ...-->
+
 ---
 
 ## Connect With Me:
