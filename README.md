@@ -7,8 +7,8 @@
   <img src='https://github.com/mayankchaudhary26/Cool-Readme-ideas/blob/master/data/octocat/droidtocat.png' width='100"'>
 <br>
 </p> -->
-
-# ✨ I'm an AI Engineer ✨
+<div align="center">
+  <h1> ✨ I'm an AI Engineer ✨ </h1>
 
 <p align="center">
 <img align="center" src="https://github.com/abhisheknaiidu/abhisheknaiidu/blob/master/code.gif?raw=true" width="10000" height="520" />
