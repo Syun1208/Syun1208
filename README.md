@@ -49,8 +49,8 @@ Here are some informations related to me:
   <img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" alt="opencv" width="60"/>
 
 </p>
-<!-- 
-<img align='center' src='https://github.com/ThanhPham1987/ThanhPham1987/blob/main/contributions.svg' width='900"'> -->
+
+<img align='center' src='https://github.com/ThanhPham1987/ThanhPham1987/blob/main/contributions.svg' width='900"'> 
 
 [youtube]: https://www.youtube.com/c/SyunEngineerChannel
 [facebook]: https://www.facebook.com/syun128/
