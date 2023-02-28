@@ -52,7 +52,7 @@ Here are some informations related to me:
 
 <img align='center' src='https://github.com/ThanhPham1987/ThanhPham1987/blob/main/contributions.svg' width='900"'> 
 
-<a href="https://www.adamalston.com/"><img height="100px" src="https://github-readme-stats.vercel.app/api?username=Syun1208&hide_title=true&hide_border=true&show_icons=true&include_all_commits=true&count_private=true&line_height=21&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" /><!-- wi*quL3fcV --><img height="100px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Syun1208&hide=html&hide_title=true&hide_border=true&layout=compact&langs_count=7&exclude_repo=comp426&text_color=000&icon_color=fff&bg_color=0,52fa5a,4dfcff,c64dff&theme=graywhite" /></a>
+<a href="https://www.adamalston.com/"><img height="100px" width="900" src="https://github-readme-stats.vercel.app/api?username=Syun1208&hide_title=true&hide_border=true&show_icons=true&include_all_commits=true&count_private=true&line_height=21&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" /><!-- wi*quL3fcV --><img height="100px" width="900" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Syun1208&hide=html&hide_title=true&hide_border=true&layout=compact&langs_count=7&exclude_repo=comp426&text_color=000&icon_color=fff&bg_color=0,52fa5a,4dfcff,c64dff&theme=graywhite" /></a>
 
 [youtube]: https://www.youtube.com/c/SyunEngineerChannel
 [facebook]: https://www.facebook.com/syun128/
