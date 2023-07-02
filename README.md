@@ -47,6 +47,7 @@ Here are some informations related to me:
   <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="pytorch" width="60"/>
   <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="60"/>
   <img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" alt="opencv" width="60"/>
+  <img src="https://seeklogo.com/images/G/google-cloud-logo-ADE788217F-seeklogo.com.png" alt="gcp" width="60"/>
 
 </p>
 
