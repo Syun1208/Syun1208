@@ -25,7 +25,7 @@ Here are some informations related to me:
 - 🌱 I’m currently learning **AI, MLOps, Embedded Systems, and Cloud Computing**
 - 👯 I’m looking to collaborate on those who are really into AI fields
 - 🤔 I’m looking for frameworks which are useful for my projects
-- 💬 Ask me about the questions related to AI fields or IELTS
+- 💬 Ask me about the questions related to AI fields or other technologies
 - 📫 How to reach me: [***Facebook***](https://www.facebook.com/syun128/) or [***LinkedIn***](https://www.linkedin.com/in/syun-cet/)
 - 😄 Pronouns: English, VietNamese
 - ⚡ Fun fact: I don't have vilid logic for programming 😄
