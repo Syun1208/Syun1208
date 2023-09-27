@@ -22,7 +22,7 @@ Here are some informations related to me:
 <img align="right" width=300 alt="Unicorn" src="https://cdn.dribbble.com/users/1059583/screenshots/4171367/coding-freak.gif" />
 
 - 🔭 I’m currently working on [**UTE-AI-Lab**](https://www.facebook.com/groups/1015789475526341) and [**Nexcel Solutions**](https://www.linkedin.com/company/nexcel-solutions/).
-- 🌱 I’m currently learning **AI, MLOps, Embedded Systems, and Cloud Computing**
+- 🌱 I’m currently learning **AI, MLOps, Data Engineering, and Cloud Computing**
 - 👯 I’m looking to collaborate on those who are really into AI fields
 - 🤔 I’m looking for frameworks which are useful for my projects
 - 💬 Ask me about the questions related to AI fields or other technologies
