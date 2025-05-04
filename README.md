@@ -8,7 +8,7 @@
 <br>
 </p> -->
 <div align="center">
-  <h1> ✨ I'm an AI Engineer ✨ </h1>
+  <h1> ✨ I'm an AI Solutions Architect ✨ </h1>
 </div>
 
 <p align="center">
