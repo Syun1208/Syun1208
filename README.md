@@ -24,7 +24,7 @@ Here are some informations related to me:
 - 🔭 I’m currently working at [**UTE-AI-Lab**](https://www.facebook.com/groups/1015789475526341) and [**Nexcel Solutions**](https://www.linkedin.com/company/nexcel-solutions/).
 - 🌱 I’m currently learning **AI, MLOps, Data Engineering, and Cloud Computing**
 - 👯 I’m looking to collaborate on those who are really into AI fields
-- 🤔 I’m looking for frameworks which are useful for my projects
+- 🤔 I’m looking for robust algorithms or models which are useful for my projects
 - 💬 Ask me about the questions related to AI fields or other technologies
 - 📫 How to reach me: [***Facebook***](https://www.facebook.com/syun128/) or [***LinkedIn***](https://www.linkedin.com/in/syun-cet/)
 - 😄 Pronouns: English, VietNamese
@@ -60,7 +60,7 @@ Here are some informations related to me:
 [youtube]: https://www.youtube.com/c/SyunEngineerChannel
 [facebook]: https://www.facebook.com/syun128/
 [instagram]: https://www.instagram.com/syun12_8/
-[linkedin]: https://www.linkedin.com/in/syun-cet/
+[linkedin]: https://www.linkedin.com/in/syun-ai/
 [gmail]: https://phamlong12082001@gmail.com
 
 <!--## <img src="https://camo.githubusercontent.com/de4126dd5395c2fb600da5d41aa142767bd97d7e14fbe15a75140ef024ec13de/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f636a3837437866527472556966463352796b2f67697068792e676966" width="42px">&nbsp; My Github Stats ...-->
