@@ -26,7 +26,7 @@ Here are some informations related to me:
 - 👯 I’m looking to collaborate on those who are really into AI fields
 - 🤔 I’m looking for robust algorithms or models which are useful for my projects
 - 💬 Ask me about the questions related to AI fields or other technologies
-- 📫 How to reach me: [***Facebook***](https://www.facebook.com/syun128/) or [***LinkedIn***](https://www.linkedin.com/in/syun-cet/)
+- 📫 How to reach me: [***Facebook***](https://www.facebook.com/syun128/) or [***LinkedIn***](https://www.linkedin.com/in/syun-ai/)
 - 😄 Pronouns: English, VietNamese
 - ⚡ Fun fact: I don't have vilid logic for programming 😄
 - 👩‍💻 Tuitorial: [***My Youtube channel***](https://www.youtube.com/c/SyunEngineerChannel)
