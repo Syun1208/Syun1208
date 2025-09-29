@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pham Minh Long — AI Portfolio</title>
+  <link rel="icon" type="image/jpeg" href="https://raw.githubusercontent.com/Syun1208/Syun1208/main/images/avata.jpg" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/Syun1208/Syun1208/main/images/avata.jpg" />
+  <meta property="og:title" content="Pham Minh Long — AI Portfolio" />
+  <meta property="og:description" content="AI Solutions Architect | Researcher @ ACM Lab, NYCU" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg2: #161b22;
+      --bg3: #1c2128;
+      --border: #30363d;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #38bdf8;
+      --accent2: #818cf8;
+      --green: #3fb950;
+      --orange: #f97316;
+      --red: #f85149;
+      --purple: #a78bfa;
+      --grad: linear-gradient(135deg, #38bdf8, #818cf8);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(13,17,23,.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2.5rem; height: 60px;
+    }
+    .nav-logo {
+      font-weight: 800; font-size: 1.1rem;
+      background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none; font-size: .9rem; font-weight: 500;
+      transition: color .2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+    /* ── SECTIONS ── */
+    section { padding: 100px 0 60px; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+    .section-title {
+      font-size: 2rem; font-weight: 800; margin-bottom: 3rem;
+      display: flex; align-items: center; gap: .75rem;
+    }
+    .section-title::after {
+      content: ''; flex: 1; height: 1px; background: var(--border);
+    }
+    .tag {
+      display: inline-block; padding: .2rem .65rem; border-radius: 999px;
+      font-size: .75rem; font-weight: 600; margin: .2rem .15rem;
+    }
+    .tag-blue  { background: rgba(56,189,248,.15); color: var(--accent); }
+    .tag-purple{ background: rgba(129,140,248,.15); color: var(--accent2); }
+    .tag-green { background: rgba(63,185,80,.15);  color: var(--green); }
+    .tag-orange{ background: rgba(249,115,22,.15); color: var(--orange); }
+    .tag-red   { background: rgba(248,81,73,.15);  color: var(--red); }
+
+    /* ── HOME ── */
+    #home {
+      min-height: 100vh; display: flex; align-items: center;
+      background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(56,189,248,.12), transparent);
+      padding-top: 60px;
+    }
+    .hero { text-align: center; }
+    .hero-avatar {
+      width: 140px; height: 140px; border-radius: 50%;
+      border: 3px solid var(--accent);
+      margin: 0 auto 1.5rem;
+      object-fit: cover;
+      background: var(--bg2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem;
+      overflow: hidden;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800;
+      background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero-sub {
+      font-size: 1.15rem; color: var(--muted); margin: .75rem 0 .5rem;
+      font-family: 'Fira Code', monospace;
+    }
+    .hero-sub span { color: var(--accent); }
+    .hero-quote {
+      font-style: italic; color: var(--muted); margin: 1.25rem auto;
+      max-width: 500px; font-size: .95rem; border-left: 3px solid var(--accent);
+      padding-left: 1rem; text-align: left;
+    }
+    .hero-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; margin: 1.5rem 0; }
+    .hero-socials { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; margin-top: 1.5rem; }
+    .social-btn {
+      display: flex; align-items: center; gap: .4rem;
+      padding: .45rem 1rem; border-radius: 8px; font-size: .85rem; font-weight: 600;
+      text-decoration: none; transition: opacity .2s, transform .15s;
+      border: 1px solid var(--border);
+    }
+    .social-btn:hover { opacity: .85; transform: translateY(-2px); }
+    .sb-github  { background: #161b22; color: #e6edf3; }
+    .sb-linkedin{ background: #0a66c2; color: #fff; }
+    .sb-hf      { background: #ff9d00; color: #000; }
+    .sb-scholar { background: #4285f4; color: #fff; }
+    .sb-yt      { background: #ff0000; color: #fff; }
+    .sb-fb      { background: #1877f2; color: #fff; }
+    .sb-mail    { background: #d14836; color: #fff; }
+
+    /* ── ABOUT ── */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .about-card {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem;
+    }
+    .about-card h3 { font-size: 1rem; color: var(--accent); margin-bottom: 1rem; font-weight: 700; }
+    .about-info li {
+      list-style: none; padding: .35rem 0; border-bottom: 1px solid var(--border);
+      font-size: .9rem; color: var(--muted);
+    }
+    .about-info li:last-child { border-bottom: none; }
+    .about-info li strong { color: var(--text); }
+    .about-info a { color: var(--accent); text-decoration: none; }
+    .skills-group { margin-bottom: 1.25rem; }
+    .skills-group h4 { font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .5rem; }
+    .about-wide {
+      grid-column: 1 / -1;
+      background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem;
+    }
+    .edu-item { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: .5rem; }
+    .edu-item h4 { font-size: 1rem; font-weight: 700; }
+    .edu-item p { color: var(--muted); font-size: .88rem; margin-top: .2rem; }
+    .edu-date { color: var(--accent); font-size: .85rem; font-family: 'Fira Code', monospace; white-space: nowrap; }
+    .gpa-badge {
+      display: inline-block; margin-top: .4rem; padding: .2rem .7rem;
+      background: rgba(63,185,80,.15); color: var(--green); border-radius: 6px; font-size: .8rem; font-weight: 700;
+    }
+
+    /* ── EXPERIENCE ── */
+    .timeline { position: relative; padding-left: 2rem; }
+    .timeline::before {
+      content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+      width: 2px; background: linear-gradient(to bottom, var(--accent), var(--accent2));
+      border-radius: 2px;
+    }
+    .tl-item { position: relative; margin-bottom: 2.5rem; }
+    .tl-dot {
+      position: absolute; left: -2.45rem; top: .35rem;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--accent); border: 2px solid var(--bg);
+    }
+    .tl-card {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem;
+      transition: border-color .2s;
+    }
+    .tl-card:hover { border-color: var(--accent); }
+    .tl-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: .5rem; margin-bottom: .75rem; }
+    .tl-company { display: flex; align-items: center; gap: .75rem; }
+    .tl-logo {
+      width: 42px; height: 42px; border-radius: 8px; object-fit: cover;
+      background: var(--bg3); border: 1px solid var(--border);
+    }
+    .tl-company h3 { font-size: 1.05rem; font-weight: 700; }
+    .tl-company p  { font-size: .85rem; color: var(--accent); font-weight: 600; }
+    .tl-date { color: var(--muted); font-size: .82rem; font-family: 'Fira Code', monospace; }
+    .tl-bullets { padding-left: 1.1rem; margin-top: .5rem; }
+    .tl-bullets li { font-size: .88rem; color: var(--muted); margin-bottom: .35rem; }
+    .tl-bullets li strong { color: var(--text); }
+    .prize-badge {
+      display: inline-flex; align-items: center; gap: .3rem;
+      background: rgba(249,115,22,.15); color: var(--orange);
+      border-radius: 6px; padding: .2rem .65rem; font-size: .78rem; font-weight: 700; margin-bottom: .5rem;
+    }
+
+    /* ── PROJECTS ── */
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+    .proj-card {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem;
+      transition: border-color .2s, transform .2s;
+    }
+    .proj-card:hover { border-color: var(--accent2); transform: translateY(-3px); }
+    .proj-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: .6rem; }
+    .proj-header h3 { font-size: 1rem; font-weight: 700; }
+    .proj-date { font-size: .78rem; color: var(--muted); font-family: 'Fira Code', monospace; }
+    .proj-company { font-size: .82rem; color: var(--accent); margin-bottom: .6rem; }
+    .proj-desc { font-size: .87rem; color: var(--muted); margin-bottom: .9rem; line-height: 1.5; }
+    .proj-metrics {
+      background: var(--bg3); border-radius: 8px; padding: .6rem .8rem;
+      font-size: .78rem; color: var(--green); font-family: 'Fira Code', monospace; margin-bottom: .8rem;
+    }
+    .proj-links { display: flex; gap: .5rem; flex-wrap: wrap; }
+    .proj-link {
+      font-size: .78rem; padding: .25rem .7rem; border-radius: 6px;
+      text-decoration: none; font-weight: 600; border: 1px solid var(--border);
+      color: var(--muted); transition: color .2s, border-color .2s;
+    }
+    .proj-link:hover { color: var(--accent); border-color: var(--accent); }
+
+    /* ── AWARDS ── */
+    .awards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; }
+    .award-card {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem;
+      transition: border-color .2s;
+    }
+    .award-card:hover { border-color: var(--orange); }
+    .award-icon { font-size: 2rem; margin-bottom: .5rem; }
+    .award-card h4 { font-size: .92rem; font-weight: 700; margin-bottom: .3rem; }
+    .award-card p  { font-size: .82rem; color: var(--muted); }
+    .cert-section { margin-top: 3rem; }
+    .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+    .cert-item {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: 10px;
+      padding: 1rem 1.25rem; display: flex; align-items: center; gap: .85rem;
+      transition: border-color .2s;
+    }
+    .cert-item:hover { border-color: var(--accent); }
+    .cert-logo { width: 40px; height: 40px; object-fit: contain; border-radius: 6px; }
+    .cert-info h4 { font-size: .88rem; font-weight: 700; }
+    .cert-info p  { font-size: .78rem; color: var(--muted); }
+
+    /* ── PUBLICATIONS ── */
+    .pub-card {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem;
+      margin-bottom: 1.25rem; transition: border-color .2s;
+    }
+    .pub-card:hover { border-color: var(--accent2); }
+    .pub-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: .4rem; }
+    .pub-card p  { font-size: .87rem; color: var(--muted); margin-bottom: .6rem; }
+    .pub-venue { font-size: .8rem; color: var(--accent2); font-style: italic; }
+    .scholar-cta {
+      text-align: center; margin-top: 2.5rem;
+      background: var(--bg2); border: 1px dashed var(--border); border-radius: 12px; padding: 2rem;
+    }
+    .scholar-cta p { color: var(--muted); margin-bottom: 1rem; }
+    .btn {
+      display: inline-flex; align-items: center; gap: .4rem;
+      padding: .6rem 1.4rem; border-radius: 8px; font-size: .9rem; font-weight: 600;
+      text-decoration: none; transition: opacity .2s, transform .15s;
+    }
+    .btn:hover { opacity: .85; transform: translateY(-2px); }
+    .btn-primary { background: var(--grad); color: #fff; }
+    .btn-outline  { border: 1px solid var(--accent); color: var(--accent); background: transparent; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center; padding: 2rem; border-top: 1px solid var(--border);
+      color: var(--muted); font-size: .85rem;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 700px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .about-wide { grid-column: 1; }
+      .nav-links { gap: 1rem; }
+      nav { padding: 0 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════ NAV ══════════════ -->
+<nav>
+  <span class="nav-logo">PML.</span>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#awards">Awards</a></li>
+    <li><a href="#publications">Publications</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════ HOME ══════════════ -->
+<section id="home">
+  <div class="container">
+    <div class="hero">
+      <div class="hero-avatar" style="background:#161b22;">
+        <img src="https://raw.githubusercontent.com/Syun1208/Syun1208/main/images/avata.jpg" alt="Pham Minh Long" style="width:100%;height:100%;object-fit:cover;" />
+      </div>
+      <h1>Pham Minh Long</h1>
+      <p class="hero-sub">
+        <span>✨ AI Solutions Architect</span> &nbsp;·&nbsp; Researcher @ ACM Lab, NYCU
+      </p>
+      <blockquote class="hero-quote">"BE YOUR BEST SELF!"</blockquote>
+
+      <div class="hero-badges">
+        <span class="tag tag-blue">🤖 LLM / AI Agent</span>
+        <span class="tag tag-purple">🔬 Multimodal Learning</span>
+        <span class="tag tag-green">☁️ MLOps / Cloud</span>
+        <span class="tag tag-orange">🔐 AI Agent Security</span>
+        <span class="tag tag-red">⚡ Distributed Systems</span>
+      </div>
+
+      <div class="hero-socials">
+        <a class="social-btn sb-github"  href="https://github.com/Syun1208" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a class="social-btn sb-linkedin" href="https://www.linkedin.com/in/syun-ai/" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a class="social-btn sb-hf" href="https://huggingface.co/leonpham1208" target="_blank">🤗 HuggingFace</a>
+        <a class="social-btn sb-scholar" href="https://scholar.google.com/citations?hl=vi&user=TIq18nUAAAAJ" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
+          Scholar
+        </a>
+        <a class="social-btn sb-yt" href="https://www.youtube.com/c/SyunEngineerChannel" target="_blank">▶ YouTube</a>
+        <a class="social-btn sb-fb" href="https://www.facebook.com/syun128/" target="_blank">Facebook</a>
+        <a class="social-btn sb-mail" href="mailto:phamlong12082001@gmail.com">✉ Email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ ABOUT ══════════════ -->
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-grid">
+
+      <!-- Basic Info -->
+      <div class="about-card">
+        <h3>📋 Basic Info</h3>
+        <ul class="about-info">
+          <li><strong>Name:</strong> Pham Minh Long</li>
+          <li><strong>Phone:</strong> (+84) 036 762 3811</li>
+          <li><strong>Email:</strong> <a href="mailto:phamlong12082001@gmail.com">phamlong12082001@gmail.com</a></li>
+          <li><strong>Languages:</strong> Vietnamese, English (IELTS 7.5)</li>
+          <li><strong>Location:</strong> Ho Chi Minh City, Vietnam</li>
+          <li><strong>Lab:</strong> <a href="https://nycu-acm.github.io/ACM_NYCU_website/" target="_blank">ACM Lab, NYCU</a></li>
+          <li><strong>Research:</strong> LLM · AI Agent Security · Multimodal Learning · Distributed Systems</li>
+        </ul>
+      </div>
+
+      <!-- Education -->
+      <div class="about-card">
+        <h3>🎓 Education</h3>
+        <div class="edu-item">
+          <div>
+            <h4>National Yang Ming Chiao Tung University</h4>
+            <p>Master's student · <a href="https://nycu-acm.github.io/ACM_NYCU_website/" target="_blank" style="color:var(--accent)">ACM Lab</a></p>
+            <span class="gpa-badge">In Progress</span>
+          </div>
+          <span class="edu-date">2024 – present</span>
+        </div>
+        <hr style="border-color:var(--border);margin:1rem 0"/>
+        <div class="edu-item">
+          <div>
+            <h4>HCMC University of Technology and Education</h4>
+            <p>B.Eng. Computer Engineering · Valedictorian</p>
+            <span class="gpa-badge">GPA 3.25/4.00 · Top 1/60</span>
+          </div>
+          <span class="edu-date">Aug 2019 – Sep 2023</span>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="about-wide">
+        <h3 style="color:var(--accent);font-size:1rem;margin-bottom:1.25rem">🛠️ Technical Skills</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.25rem">
+
+          <div class="skills-group">
+            <h4>Languages</h4>
+            <span class="tag tag-blue">Python</span><span class="tag tag-blue">C/C++</span>
+            <span class="tag tag-blue">Java</span><span class="tag tag-blue">NextJS</span>
+          </div>
+
+          <div class="skills-group">
+            <h4>Deep Learning</h4>
+            <span class="tag tag-orange">PyTorch</span><span class="tag tag-orange">TensorFlow</span>
+            <span class="tag tag-orange">OpenCV</span><span class="tag tag-orange">ONNX</span>
+            <span class="tag tag-orange">TensorRT</span><span class="tag tag-orange">TFLite</span>
+            <span class="tag tag-orange">WandB</span>
+          </div>
+
+          <div class="skills-group">
+            <h4>LLM / ADK</h4>
+            <span class="tag tag-purple">LangChain</span><span class="tag tag-purple">LangGraph</span>
+            <span class="tag tag-purple">LlamaIndex</span><span class="tag tag-purple">CrewAI</span>
+            <span class="tag tag-purple">vLLM</span><span class="tag tag-purple">Ollama</span>
+          </div>
+
+          <div class="skills-group">
+            <h4>MLOps / DevOps</h4>
+            <span class="tag tag-green">Docker</span><span class="tag tag-green">Kubernetes</span>
+            <span class="tag tag-green">Airflow</span><span class="tag tag-green">MLflow</span>
+            <span class="tag tag-green">ArgoCD</span><span class="tag tag-green">Grafana</span>
+            <span class="tag tag-green">Prometheus</span><span class="tag tag-green">GitLab-CI</span>
+          </div>
+
+          <div class="skills-group">
+            <h4>Cloud & Infrastructure</h4>
+            <span class="tag tag-orange">AWS</span><span class="tag tag-orange">GCP</span>
+            <span class="tag tag-orange">HAProxy</span><span class="tag tag-orange">Portainer</span>
+          </div>
+
+          <div class="skills-group">
+            <h4>Databases</h4>
+            <span class="tag tag-red">Faiss</span><span class="tag tag-red">Qdrant</span>
+            <span class="tag tag-red">ElasticSearch</span><span class="tag tag-red">Chroma</span>
+            <span class="tag tag-red">MySQL</span><span class="tag tag-red">MongoDB</span>
+            <span class="tag tag-red">Redis</span><span class="tag tag-red">BigQuery</span>
+          </div>
+
+          <div class="skills-group">
+            <h4>Knowledges</h4>
+            <span class="tag tag-blue">Graph RAG</span><span class="tag tag-blue">Multi-Agent</span>
+            <span class="tag tag-blue">LoRA / RLHF / GRPO</span><span class="tag tag-blue">DPO</span>
+            <span class="tag tag-blue">System Design</span><span class="tag tag-blue">Load Balancing</span>
+            <span class="tag tag-blue">Event-driven</span>
+          </div>
+
+          <div class="skills-group">
+            <h4>ML / Data</h4>
+            <span class="tag tag-purple">Pandas</span><span class="tag tag-purple">Apache Spark</span>
+            <span class="tag tag-purple">Scikit-learn</span><span class="tag tag-purple">XGBoost</span>
+            <span class="tag tag-purple">Polars</span><span class="tag tag-purple">Numpy</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ EXPERIENCE ══════════════ -->
+<section id="experience">
+  <div class="container">
+    <h2 class="section-title">Professional Experience</h2>
+    <p style="color:var(--muted);margin-bottom:2rem;font-size:.9rem">🚀 <strong style="color:var(--text)">3+ years</strong> of AI/ML engineering across fintech, cloud, and software product companies.</p>
+    <div class="timeline">
+
+      <!-- MoMo -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-company">
+              <img class="tl-logo" src="https://raw.githubusercontent.com/Syun1208/Syun1208/main/images/momo-file-240411162904.svg" alt="MoMo" onerror="this.src='https://img.shields.io/badge/M-A50064?style=flat-square'"/>
+              <div>
+                <h3>MoMo</h3>
+                <p>Middle AI Engineer</p>
+              </div>
+            </div>
+            <span class="tl-date">Jun 2025 – Mar 2026</span>
+          </div>
+          <div class="prize-badge">🏆 Top 2 Innovation Product Prize at MoMo</div>
+          <ul class="tl-bullets">
+            <li>Enhanced <strong>Mimir Chatbot Platform</strong> — automated report generation, SQL/Chart/Insights using <strong>LangGraph + Deep Research pattern</strong> within 2 months</li>
+            <li>Implemented Jira-automated assignment via LangGraph for MoMo Data Scientists and employees</li>
+            <li>Integrated MCP Server and optimized historical conversation usage; weekly monitoring via Grafana + LangFuse</li>
+            <li><strong>Performance:</strong> Knowledge Retention 0.98 · Turn Relevancy 0.74 · LLM-based SQL Accuracy 0.64 · P90 75.2s</li>
+          </ul>
+          <div style="margin-top:.75rem">
+            <span class="tag tag-purple">LangGraph</span><span class="tag tag-purple">LangChain</span>
+            <span class="tag tag-blue">FastAPI</span><span class="tag tag-blue">Redis</span>
+            <span class="tag tag-green">BigQuery</span><span class="tag tag-green">Qdrant</span>
+            <span class="tag tag-orange">Azure OpenAI</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nexcel -->
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--accent2)"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-company">
+              <img class="tl-logo" src="https://raw.githubusercontent.com/Syun1208/Syun1208/main/images/nexcel.jpeg" alt="Nexcel Solutions" onerror="this.style.display='none'"/>
+              <div>
+                <h3>Nexcel Solutions</h3>
+                <p>ML Engineer</p>
+              </div>
+            </div>
+            <span class="tl-date">Aug 2023 – Jun 2025</span>
+          </div>
+          <div class="prize-badge" style="background:rgba(129,140,248,.15);color:var(--accent2)">⭐ 2× ME+ · 1× EE Performance Ratings</div>
+          <ul class="tl-bullets">
+            <li>Built <strong>Agentic RAG baseline</strong> + Web UI (Nextjs) for Betting Knowledge chatbot within 2 weeks; fine-tuned Llama-3.2-7B & Qwen2.5-7B via LoRA/PEFT</li>
+            <li>Designed <strong>multi-agent Report Entity Recognition</strong> system with Telegram integration</li>
+            <li>Analyzed & adjusted <strong>XGBoost loss function</strong> for Customer Time-Series Prediction (0.35 TP · 0.92 TN)</li>
+            <li>Pioneered CI/CD pipeline with multi-stage Dockerfiles, Airflow scheduling, Portainer management</li>
+            <li>Webiometric Data Streaming: Kafka → MySQL (SP + schema design) from Taiwan producer</li>
+          </ul>
+          <div style="margin-top:.75rem">
+            <span class="tag tag-purple">LangChain</span><span class="tag tag-orange">Ollama</span>
+            <span class="tag tag-orange">vLLM</span><span class="tag tag-blue">FastAPI</span>
+            <span class="tag tag-green">Airflow</span><span class="tag tag-red">Qdrant</span>
+            <span class="tag tag-green">HAProxy</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unicloud -->
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--green)"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-company">
+              <img class="tl-logo" src="https://raw.githubusercontent.com/Syun1208/Syun1208/main/images/unicloud.jpeg" alt="Unicloud Group" onerror="this.style.display='none'"/>
+              <div>
+                <h3>Unicloud Group</h3>
+                <p>AI Engineer</p>
+              </div>
+            </div>
+            <span class="tl-date">Feb 2022 – Aug 2023</span>
+          </div>
+          <ul class="tl-bullets">
+            <li>Designed and improved <strong>Unicloud eKYC ID Card Verification</strong> system — YOLOv5/v7/v8 for 4-corner detection, PaddleOCR for information extraction</li>
+            <li>Added orientation correction without models to enhance inference time and accuracy</li>
+            <li><strong>Performance:</strong> 64 fps · 0.87 mAP@50 · 0.94 mAP50-95 · 0.89 F1-score · 1.67 MB Docker image</li>
+          </ul>
+          <div style="margin-top:.75rem">
+            <span class="tag tag-orange">YOLOv8</span><span class="tag tag-orange">PaddleOCR</span>
+            <span class="tag tag-blue">FastAPI</span><span class="tag tag-green">Docker</span>
+            <span class="tag tag-orange">GCP</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- UTE-AI Lab -->
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--muted)"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-company">
+              <div style="width:42px;height:42px;border-radius:8px;background:var(--bg3);display:flex;align-items:center;justify-content:center;font-size:1.2rem;border:1px solid var(--border)">🔬</div>
+              <div>
+                <h3>UTE-AI Lab</h3>
+                <p>Research Assistant</p>
+              </div>
+            </div>
+            <span class="tl-date">May 2021 – Dec 2023</span>
+          </div>
+          <ul class="tl-bullets">
+            <li>Participated in numerous competitions and conferences in HCMC</li>
+            <li>Tracked state-of-the-art AI research trends under PhD. Tran Vu Hoang</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PROJECTS ══════════════ -->
+<section id="projects">
+  <div class="container">
+    <h2 class="section-title">Research &amp; Projects</h2>
+    <div class="projects-grid">
+
+      <div class="proj-card">
+        <div class="proj-header">
+          <h3>🤖 Mimir Chatbot Platform</h3>
+          <span class="proj-date">Jun 2025 – Mar 2026</span>
+        </div>
+        <p class="proj-company">MoMo · Middle AI Engineer · Team Size: 3</p>
+        <p class="proj-desc">Enhanced internal chatbot with LangGraph Deep Research pattern for automated SQL, Chart, and Insights generation. Integrated MCP Server and Jira automation.</p>
+        <div class="proj-metrics">
+          KR: 0.98 · TR: 0.74 · SQL: 0.64 · Chart: 0.64 · P90: 75.2s
+        </div>
+        <div>
+          <span class="tag tag-purple">LangGraph</span><span class="tag tag-blue">FastAPI</span>
+          <span class="tag tag-orange">Azure OpenAI</span><span class="tag tag-green">BigQuery</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-header">
+          <h3>🏷️ Report Entity Recognition</h3>
+          <span class="proj-date">Feb – Jun 2025</span>
+        </div>
+        <p class="proj-company">Nexcel Solutions · Junior ML Engineer · Team Size: 2</p>
+        <p class="proj-desc">Multi-agent system for multi-report generation across departments. Fine-tuned Qwen2.5-7B with bidirectional transformer for entity & span recognition.</p>
+        <div>
+          <span class="tag tag-purple">Qwen2.5-7B</span><span class="tag tag-orange">Ollama</span>
+          <span class="tag tag-blue">HuggingFace</span><span class="tag tag-green">HAProxy</span>
+        </div>
+        <div class="proj-links" style="margin-top:.75rem">
+          <a class="proj-link" href="https://huggingface.co/leonpham1208" target="_blank">🤗 HuggingFace</a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-header">
+          <h3>💬 Domain Chatbot – Betting Knowledge</h3>
+          <span class="proj-date">Dec 2024 – Jun 2025</span>
+        </div>
+        <p class="proj-company">Nexcel Solutions · Junior ML Engineer · Team Size: 2</p>
+        <p class="proj-desc">Agentic RAG baseline + Web UI within 1 week. Fine-tuned Llama-3.2-7B & Qwen2.5-7B via LoRA/PEFT on internal betting knowledge.</p>
+        <div class="proj-metrics">
+          Precision: 0.74 · Faithfulness: 0.89 · Relevancy: 0.67
+        </div>
+        <div>
+          <span class="tag tag-orange">Llama-3.2-7B</span><span class="tag tag-orange">vLLM</span>
+          <span class="tag tag-blue">Next.js</span><span class="tag tag-red">Qdrant</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-header">
+          <h3>📈 Customer Performance Prediction</h3>
+          <span class="proj-date">Jun – Dec 2024</span>
+        </div>
+        <p class="proj-company">Nexcel Solutions · Junior ML Engineer · Team Size: 2</p>
+        <p class="proj-desc">Time-series RFM model for Taiwan punters' daily performance. Adapted XGBoost loss function for company winloss. Applied active learning &amp; unsupervised domain adaptation.</p>
+        <div class="proj-metrics">TP: 0.35 · TN: 0.92</div>
+        <div>
+          <span class="tag tag-purple">XGBoost</span><span class="tag tag-purple">K-Means</span>
+          <span class="tag tag-blue">RFM Model</span><span class="tag tag-blue">UMAP</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-header">
+          <h3>🎥 Text-Video Retrieval</h3>
+          <span class="proj-date">Jul – Oct 2023</span>
+        </div>
+        <p class="proj-company">HCMC AI Challenge 2023 · Leader · Team Size: 5</p>
+        <p class="proj-desc">Multi-modal search engine: top-k retrieval from video/image/text using CLIP, ASR, Image Captioning, OCR for feature extraction and cosine similarity.</p>
+        <div>
+          <span class="tag tag-purple">CLIP</span><span class="tag tag-purple">BERT</span>
+          <span class="tag tag-red">Faiss</span><span class="tag tag-red">Elasticsearch</span>
+          <span class="tag tag-blue">FastAPI</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-header">
+          <h3>📱 Smart Menu Application</h3>
+          <span class="proj-date">Feb – Jun 2023</span>
+        </div>
+        <p class="proj-company">Graduation Project · Researcher · Team Size: 1</p>
+        <p class="proj-desc">Mobile app: Menu Scanner (PaddleOCR + C++ core), Machine Translation (RetNet/Transformer), Recommendation (NeuMF + Collaborative Filtering), RASA chatbot.</p>
+        <div>
+          <span class="tag tag-blue">Java</span><span class="tag tag-orange">PaddleOCR</span>
+          <span class="tag tag-purple">BERT</span><span class="tag tag-green">GCP</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-header">
+          <h3>🪪 ID Card Verification – eKYC</h3>
+          <span class="proj-date">Feb 2022 – Aug 2023</span>
+        </div>
+        <p class="proj-company">Unicloud Group · AI Engineer · Team Size: 5</p>
+        <p class="proj-desc">Improved eKYC system with YOLOv5/v7/v8 for 4-corner detection, perspective transform for ROI extraction, PaddleOCR for text extraction.</p>
+        <div class="proj-metrics">64 fps · mAP@50: 0.87 · F1: 0.89 · Image: 1.67 MB</div>
+        <div>
+          <span class="tag tag-orange">YOLOv8</span><span class="tag tag-orange">PaddleOCR</span>
+          <span class="tag tag-green">Docker</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-header">
+          <h3>🚗 Autonomous Car – CV &amp; DL</h3>
+          <span class="proj-date">Sep – Nov 2022</span>
+        </div>
+        <p class="proj-company">UIT Racing Car 2023 · Leader · Team Size: 4</p>
+        <p class="proj-desc">UNET 3+ / BiseNet lane segmentation with PID controller. YOLOv4-tiny/v7/v8 traffic sign detection. Simulated on Unity, embedded on Jetson Nano.</p>
+        <div>
+          <span class="tag tag-orange">YOLOv8</span><span class="tag tag-orange">UNET 3+</span>
+          <span class="tag tag-blue">Jetson Nano</span><span class="tag tag-blue">Unity</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ AWARDS ══════════════ -->
+<section id="awards">
+  <div class="container">
+    <h2 class="section-title">Awards &amp; Honors</h2>
+
+    <div class="awards-grid">
+      <div class="award-card">
+        <div class="award-icon">🥈</div>
+        <h4>Top 2 Innovation Product Prize</h4>
+        <p>MoMo · 2025 — Mimir Chatbot Platform enhancement for Deep Research & automated reporting</p>
+      </div>
+      <div class="award-card">
+        <div class="award-icon">🎓</div>
+        <h4>Valedictorian – Computer Engineering</h4>
+        <p>HCMUTE K19 · 2023 — Top 1/60, GPA 3.25/4.00 (8.21/10.00)</p>
+      </div>
+      <div class="award-card">
+        <div class="award-icon">⭐</div>
+        <h4>EE Performance Rating</h4>
+        <p>Nexcel Solutions — Exceeding Expectations, alongside 2× ME+ ratings</p>
+      </div>
+      <div class="award-card">
+        <div class="award-icon">🏁</div>
+        <h4>HCMC AI Challenge 2023</h4>
+        <p>Leader – Text-Video Retrieval system, top competition in Ho Chi Minh City</p>
+      </div>
+      <div class="award-card">
+        <div class="award-icon">🚗</div>
+        <h4>UIT Racing Car 2023</h4>
+        <p>Leader – Autonomous Car using Deep Learning and Computer Vision on Jetson Nano</p>
+      </div>
+      <div class="award-card">
+        <div class="award-icon">🌐</div>
+        <h4>IELTS 7.5</h4>
+        <p>English proficiency — International English Language Testing System</p>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="cert-section">
+      <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:1.5rem">🏅 Certifications</h3>
+
+      <!-- AWS Certs -->
+      <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center;margin-bottom:1.5rem">
+        <div style="text-align:center">
+          <img src="https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png" width="100" style="border-radius:8px"/>
+          <p style="font-size:.8rem;color:var(--muted);margin-top:.4rem;max-width:130px">Solutions Architect Associate</p>
+        </div>
+        <div style="text-align:center">
+          <img src="https://img-c.udemycdn.com/open-badges/v2/badge-class/2042649863/56a4f532-ea3f-4747-88df-ba9e93755e5713452559103964002541.png" width="100" style="border-radius:8px"/>
+          <p style="font-size:.8rem;color:var(--muted);margin-top:.4rem;max-width:130px">Machine Learning Engineer Associate</p>
+        </div>
+        <div style="text-align:center">
+          <img src="https://images.credly.com/size/340x340/images/f0d3fbb9-bfa7-4017-9989-7bde8eaf42b1/image.png" width="100" style="border-radius:8px"/>
+          <p style="font-size:.8rem;color:var(--muted);margin-top:.4rem;max-width:130px">SysOps Administrator (CloudOps) Associate</p>
+        </div>
+      </div>
+
+      <div class="cert-grid">
+        <div class="cert-item">
+          <img class="cert-logo" src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="PyTorch"/>
+          <div class="cert-info"><h4>Deep Learning with PyTorch: Siamese Network</h4><p>Coursera</p></div>
+        </div>
+        <div class="cert-item">
+          <img class="cert-logo" src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="PyTorch"/>
+          <div class="cert-info"><h4>Deep Learning with PyTorch: GAN</h4><p>Coursera</p></div>
+        </div>
+        <div class="cert-item">
+          <img class="cert-logo" src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="PyTorch"/>
+          <div class="cert-info"><h4>Deep Learning with PyTorch: Neural Style Transfer</h4><p>Coursera</p></div>
+        </div>
+        <div class="cert-item">
+          <img class="cert-logo" src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="PyTorch"/>
+          <div class="cert-info"><h4>Deep Learning with PyTorch: Object Localization</h4><p>Coursera</p></div>
+        </div>
+        <div class="cert-item">
+          <img class="cert-logo" src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="PyTorch"/>
+          <div class="cert-info"><h4>Deep Learning with PyTorch: GradCAM</h4><p>Coursera</p></div>
+        </div>
+        <div class="cert-item">
+          <img class="cert-logo" src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="PyTorch"/>
+          <div class="cert-info"><h4>Convolutional Neural Networks</h4><p>Coursera</p></div>
+        </div>
+        <div class="cert-item">
+          <img class="cert-logo" src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="PyTorch"/>
+          <div class="cert-info"><h4>Facial Expression Recognition with PyTorch</h4><p>Coursera</p></div>
+        </div>
+        <div class="cert-item">
+          <img class="cert-logo" src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="PyTorch"/>
+          <div class="cert-info"><h4>Aerial Image Segmentation with PyTorch</h4><p>Coursera</p></div>
+        </div>
+        <div class="cert-item">
+          <img class="cert-logo" src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="PyTorch"/>
+          <div class="cert-info"><h4>Deep Learning with PyTorch: Image Segmentation</h4><p>Coursera</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PUBLICATIONS ══════════════ -->
+<section id="publications">
+  <div class="container">
+    <h2 class="section-title">Publications</h2>
+
+    <div class="pub-card">
+      <h3>Research in Progress – ACM Lab, NYCU</h3>
+      <p>Currently conducting research at ACM Lab, National Yang Ming Chiao Tung University (NYCU) on topics including LLM, AI Agent Security, Multimodal Learning, and Distributed Systems.</p>
+      <span class="pub-venue">ACM Lab, NYCU · 2024 – present</span>
+    </div>
+
+    <div class="scholar-cta">
+      <p>Full list of publications and preprints available on Google Scholar.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a class="btn btn-primary" href="https://scholar.google.com/citations?hl=vi&user=TIq18nUAAAAJ" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
+          View Google Scholar
+        </a>
+        <a class="btn btn-outline" href="https://huggingface.co/leonpham1208" target="_blank">
+          🤗 HuggingFace Models
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <p>© 2025 Pham Minh Long · Built with ❤️ · <a href="mailto:phamlong12082001@gmail.com" style="color:var(--accent);text-decoration:none">phamlong12082001@gmail.com</a></p>
+</footer>
+
+<script>
+  // Active nav highlight on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const links = document.querySelectorAll('.nav-links a');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { threshold: 0.35 });
+  sections.forEach(s => observer.observe(s));
+
+  // Fade-in on scroll
+  const cards = document.querySelectorAll('.tl-card, .proj-card, .award-card, .cert-item, .pub-card');
+  const fadeObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+  cards.forEach(c => {
+    c.style.opacity = '0';
+    c.style.transform = 'translateY(20px)';
+    c.style.transition = 'opacity .4s ease, transform .4s ease';
+    fadeObs.observe(c);
+  });
+</script>
+</body>
+</html>
