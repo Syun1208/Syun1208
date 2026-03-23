@@ -28,9 +28,9 @@
 
 <img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%">
 
-<p align="center">
+<!-- <p align="center">
 <img src="https://github.com/abhisheknaiidu/abhisheknaiidu/blob/master/code.gif?raw=true" width="100%" height="320" />
-</p>
+</p> -->
 
 ## 📌 Quick Facts
 
