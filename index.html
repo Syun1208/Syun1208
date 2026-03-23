@@ -4,48 +4,51 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pham Minh Long — AI Portfolio</title>
-  <link rel="icon" type="image/jpeg" href="https://raw.githubusercontent.com/Syun1208/Syun1208/main/images/avata.jpg" />
+  <link rel="icon" type="image/jpeg" href="https://github.com/langchain-ai.png?size=200" />
   <meta property="og:image" content="https://raw.githubusercontent.com/Syun1208/Syun1208/main/images/avata.jpg" />
   <meta property="og:title" content="Pham Minh Long — AI Portfolio" />
   <meta property="og:description" content="AI Solutions Architect | Researcher @ ACM Lab, NYCU" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #0d1117;
-      --bg2: #161b22;
-      --bg3: #1c2128;
-      --border: #30363d;
-      --text: #e6edf3;
-      --muted: #8b949e;
-      --accent: #38bdf8;
-      --accent2: #818cf8;
-      --green: #3fb950;
-      --orange: #f97316;
-      --red: #f85149;
-      --purple: #a78bfa;
-      --grad: linear-gradient(135deg, #38bdf8, #818cf8);
+      --bg: #fafafa;
+      --bg2: #ffffff;
+      --bg3: #f3f4f6;
+      --border: #e5e7eb;
+      --text: #222222;
+      --muted: #666666;
+      --accent: #3b82f6;
+      --accent2: #8b5cf6;
+      --green: #059669;
+      --orange: #ea580c;
+      --red: #ef4444;
+      --purple: #8b5cf6;
+      --grad: linear-gradient(90deg, #2563eb, #60a5fa);
+      --serif: 'Source Serif 4', Georgia, serif;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
+      font-family: 'Manrope', sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
     }
 
     /* ── NAV ── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: rgba(13,17,23,.92);
+      background: rgba(250,250,250,.85);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
+      box-shadow: 0 1px 3px rgba(0,0,0,.03);
       display: flex; align-items: center; justify-content: space-between;
       padding: 0 2.5rem; height: 60px;
     }
     .nav-logo {
-      font-weight: 800; font-size: 1.1rem;
+      font-family: var(--serif); font-weight: 700; font-size: 1.2rem;
       background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
@@ -59,7 +62,9 @@
     section { padding: 100px 0 60px; }
     .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
     .section-title {
-      font-size: 2rem; font-weight: 800; margin-bottom: 3rem;
+      font-family: var(--serif);
+      font-size: 1.6rem; font-weight: 700; letter-spacing: -.3px;
+      margin-bottom: 2.5rem;
       display: flex; align-items: center; gap: .75rem;
     }
     .section-title::after {
@@ -69,43 +74,59 @@
       display: inline-block; padding: .2rem .65rem; border-radius: 999px;
       font-size: .75rem; font-weight: 600; margin: .2rem .15rem;
     }
-    .tag-blue  { background: rgba(56,189,248,.15); color: var(--accent); }
-    .tag-purple{ background: rgba(129,140,248,.15); color: var(--accent2); }
-    .tag-green { background: rgba(63,185,80,.15);  color: var(--green); }
-    .tag-orange{ background: rgba(249,115,22,.15); color: var(--orange); }
-    .tag-red   { background: rgba(248,81,73,.15);  color: var(--red); }
+    .tag-blue  { background: #eff6ff; color: #1d4ed8; }
+    .tag-purple{ background: #f5f3ff; color: #6d28d9; }
+    .tag-green { background: #ecfdf5; color: #047857; }
+    .tag-orange{ background: #fff7ed; color: #c2410c; }
+    .tag-red   { background: #fef2f2; color: #dc2626; }
 
     /* ── HOME ── */
     #home {
       min-height: 100vh; display: flex; align-items: center;
-      background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(56,189,248,.12), transparent);
+      background: radial-gradient(ellipse 80% 60% at 50% -10%, #eff6ff, transparent);
       padding-top: 60px;
     }
     .hero { text-align: center; }
     .hero-avatar {
-      width: 140px; height: 140px; border-radius: 50%;
-      border: 3px solid var(--accent);
-      margin: 0 auto 1.5rem;
+      width: clamp(200px, 26vw, 260px);
+      height: clamp(200px, 26vw, 260px);
+      border-radius: 50%;
+      border: 3px solid var(--bg2);
+      box-shadow: 0 6px 24px rgba(0,0,0,.12);
+      margin: 0 auto 2rem;
       object-fit: cover;
       background: var(--bg2);
       display: flex; align-items: center; justify-content: center;
-      font-size: 3rem;
+      font-size: 5rem;
       overflow: hidden;
     }
     .hero h1 {
-      font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800;
-      background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 700;
+      line-height: 1.1; letter-spacing: -.7px; color: var(--text);
     }
-    .hero-sub {
-      font-size: 1.15rem; color: var(--muted); margin: .75rem 0 .5rem;
-      font-family: 'Fira Code', monospace;
+    .hero h1::after {
+      content: ''; display: block;
+      width: 48px; height: 3px; margin: 12px auto 0;
+      border-radius: 999px; background: var(--grad);
     }
-    .hero-sub span { color: var(--accent); }
-    .hero-quote {
-      font-style: italic; color: var(--muted); margin: 1.25rem auto;
-      max-width: 500px; font-size: .95rem; border-left: 3px solid var(--accent);
-      padding-left: 1rem; text-align: left;
+    .hero-intro {
+      max-width: 660px; margin: 1.75rem auto 0;
+      padding: 14px 18px; text-align: left;
+      font-size: 1.05rem; color: var(--text);
+      border-left: 3px solid #3b82f6;
+      border-radius: 0 10px 10px 0;
+      background: linear-gradient(90deg, #eff6ff 0%, rgba(239,246,255,.25) 100%);
     }
+    .hero-intro a { color: var(--accent); font-weight: 500; text-decoration: none; }
+    .hero-intro a:hover { text-decoration: underline; }
+    .hero-intro .pos {
+      font-style: italic; font-weight: 700; color: #000;
+      text-decoration: underline; text-decoration-thickness: 2px;
+      text-underline-offset: 3px; text-decoration-color: #eab308;
+    }
+    .hero-intro .org { font-weight: 800; color: #1e40af; }
+    .hero-intro .org:hover { color: #1d4ed8; }
     .hero-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; margin: 1.5rem 0; }
     .hero-socials { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; margin-top: 1.5rem; }
     .social-btn {
@@ -115,7 +136,8 @@
       border: 1px solid var(--border);
     }
     .social-btn:hover { opacity: .85; transform: translateY(-2px); }
-    .sb-github  { background: #161b22; color: #e6edf3; }
+    .sb-cv      { background: var(--grad); color: #fff; border-color: transparent; }
+    .sb-github  { background: #222222; color: #ffffff; }
     .sb-linkedin{ background: #0a66c2; color: #fff; }
     .sb-hf      { background: #ff9d00; color: #000; }
     .sb-scholar { background: #4285f4; color: #fff; }
@@ -127,6 +149,7 @@
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
     .about-card {
       background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,.04);
     }
     .about-card h3 { font-size: 1rem; color: var(--accent); margin-bottom: 1rem; font-weight: 700; }
     .about-info li {
@@ -136,6 +159,7 @@
     .about-info li:last-child { border-bottom: none; }
     .about-info li strong { color: var(--text); }
     .about-info a { color: var(--accent); text-decoration: none; }
+    .about-info a:hover { text-decoration: underline; }
     .skills-group { margin-bottom: 1.25rem; }
     .skills-group h4 { font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .5rem; }
     .about-wide {
@@ -143,12 +167,12 @@
       background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem;
     }
     .edu-item { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: .5rem; }
-    .edu-item h4 { font-size: 1rem; font-weight: 700; }
+    .edu-item h4 { font-family: var(--serif); font-size: 1.05rem; font-weight: 700; }
     .edu-item p { color: var(--muted); font-size: .88rem; margin-top: .2rem; }
-    .edu-date { color: var(--accent); font-size: .85rem; font-family: 'Fira Code', monospace; white-space: nowrap; }
+    .edu-date { color: var(--muted); font-size: .85rem; font-weight: 600; white-space: nowrap; }
     .gpa-badge {
       display: inline-block; margin-top: .4rem; padding: .2rem .7rem;
-      background: rgba(63,185,80,.15); color: var(--green); border-radius: 6px; font-size: .8rem; font-weight: 700;
+      background: #ecfdf5; color: #047857; border-radius: 6px; font-size: .8rem; font-weight: 700;
     }
 
     /* ── EXPERIENCE ── */
@@ -166,24 +190,28 @@
     }
     .tl-card {
       background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem;
-      transition: border-color .2s;
+      box-shadow: 0 1px 3px rgba(0,0,0,.04);
+      transition: border-color .2s, box-shadow .2s;
     }
-    .tl-card:hover { border-color: var(--accent); }
+    .tl-card:hover { border-color: var(--accent); box-shadow: 0 4px 14px rgba(0,0,0,.07); }
     .tl-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: .5rem; margin-bottom: .75rem; }
     .tl-company { display: flex; align-items: center; gap: .75rem; }
     .tl-logo {
-      width: 42px; height: 42px; border-radius: 8px; object-fit: cover;
+      width: 76px; height: 76px; border-radius: 12px; object-fit: cover;
       background: var(--bg3); border: 1px solid var(--border);
     }
-    .tl-company h3 { font-size: 1.05rem; font-weight: 700; }
+    .tl-logo.contain {
+      object-fit: contain; background: #fff; padding: 6px;
+    }
+    .tl-company h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 700; }
     .tl-company p  { font-size: .85rem; color: var(--accent); font-weight: 600; }
-    .tl-date { color: var(--muted); font-size: .82rem; font-family: 'Fira Code', monospace; }
+    .tl-date { color: var(--muted); font-size: .82rem; font-weight: 600; }
     .tl-bullets { padding-left: 1.1rem; margin-top: .5rem; }
     .tl-bullets li { font-size: .88rem; color: var(--muted); margin-bottom: .35rem; }
     .tl-bullets li strong { color: var(--text); }
     .prize-badge {
       display: inline-flex; align-items: center; gap: .3rem;
-      background: rgba(249,115,22,.15); color: var(--orange);
+      background: #fff7ed; color: #c2410c;
       border-radius: 6px; padding: .2rem .65rem; font-size: .78rem; font-weight: 700; margin-bottom: .5rem;
     }
 
@@ -191,57 +219,96 @@
     .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
     .proj-card {
       background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem;
-      transition: border-color .2s, transform .2s;
+      box-shadow: 0 1px 3px rgba(0,0,0,.04);
+      transition: border-color .2s, transform .2s, box-shadow .2s;
     }
-    .proj-card:hover { border-color: var(--accent2); transform: translateY(-3px); }
+    .proj-card:hover { border-color: var(--accent2); transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,.08); }
     .proj-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: .6rem; }
-    .proj-header h3 { font-size: 1rem; font-weight: 700; }
-    .proj-date { font-size: .78rem; color: var(--muted); font-family: 'Fira Code', monospace; }
+    .proj-header h3 { font-family: var(--serif); font-size: 1.05rem; font-weight: 700; }
+    .proj-date { font-size: .78rem; color: var(--muted); font-weight: 600; }
     .proj-company { font-size: .82rem; color: var(--accent); margin-bottom: .6rem; }
     .proj-desc { font-size: .87rem; color: var(--muted); margin-bottom: .9rem; line-height: 1.5; }
     .proj-metrics {
-      background: var(--bg3); border-radius: 8px; padding: .6rem .8rem;
-      font-size: .78rem; color: var(--green); font-family: 'Fira Code', monospace; margin-bottom: .8rem;
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: .5rem; margin-bottom: .9rem;
+    }
+    .tl-card .proj-metrics { grid-template-columns: repeat(5, 1fr); }
+    .metric {
+      display: flex; flex-direction: column; justify-content: center;
+      text-align: center; padding: .65rem .4rem;
+      background: #eff6ff; border: 1px solid #dbeafe; border-radius: 10px;
+    }
+    .metric-val {
+      display: block; font-size: 1.1rem; font-weight: 800; color: #1d4ed8;
+      line-height: 1.2; letter-spacing: -.02em; font-variant-numeric: tabular-nums;
+    }
+    .metric-key {
+      display: block; margin-top: 3px; font-size: .6rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .05em; color: #64748b; line-height: 1.35;
     }
     .proj-links { display: flex; gap: .5rem; flex-wrap: wrap; }
     .proj-link {
+      display: inline-flex; align-items: center; gap: .35rem;
       font-size: .78rem; padding: .25rem .7rem; border-radius: 6px;
       text-decoration: none; font-weight: 600; border: 1px solid var(--border);
       color: var(--muted); transition: color .2s, border-color .2s;
     }
-    .proj-link:hover { color: var(--accent); border-color: var(--accent); }
+    .proj-link:hover { background: var(--text); color: #fff; border-color: var(--text); }
 
     /* ── AWARDS ── */
     .awards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; }
     .award-card {
       background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem;
-      transition: border-color .2s;
+      box-shadow: 0 1px 3px rgba(0,0,0,.04);
+      transition: border-color .2s, box-shadow .2s;
     }
     .award-card:hover { border-color: var(--orange); }
     .award-icon { font-size: 2rem; margin-bottom: .5rem; }
-    .award-card h4 { font-size: .92rem; font-weight: 700; margin-bottom: .3rem; }
+    .award-card h4 { font-family: var(--serif); font-size: .98rem; font-weight: 700; margin-bottom: .3rem; }
     .award-card p  { font-size: .82rem; color: var(--muted); }
     .cert-section { margin-top: 3rem; }
-    .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
-    .cert-item {
-      background: var(--bg2); border: 1px solid var(--border); border-radius: 10px;
-      padding: 1rem 1.25rem; display: flex; align-items: center; gap: .85rem;
-      transition: border-color .2s;
-    }
-    .cert-item:hover { border-color: var(--accent); }
-    .cert-logo { width: 40px; height: 40px; object-fit: contain; border-radius: 6px; }
-    .cert-info h4 { font-size: .88rem; font-weight: 700; }
-    .cert-info p  { font-size: .78rem; color: var(--muted); }
 
     /* ── PUBLICATIONS ── */
     .pub-card {
       background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem;
-      margin-bottom: 1.25rem; transition: border-color .2s;
+      margin-bottom: 1.25rem; box-shadow: 0 1px 3px rgba(0,0,0,.04); transition: border-color .2s;
     }
     .pub-card:hover { border-color: var(--accent2); }
-    .pub-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: .4rem; }
+    .pub-card h3 { font-family: var(--serif); font-size: 1.05rem; font-weight: 700; margin-bottom: .4rem; }
     .pub-card p  { font-size: .87rem; color: var(--muted); margin-bottom: .6rem; }
     .pub-venue { font-size: .8rem; color: var(--accent2); font-style: italic; }
+    .pub-note {
+      display: inline-block; margin-bottom: 1.25rem;
+      background: #fef9c3; color: #854d0e; border-radius: 6px;
+      padding: .2rem .7rem; font-size: .78rem; font-weight: 700;
+    }
+    .pub-card { display: flex; gap: 1rem; align-items: flex-start; }
+    .pub-num {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
+      background: var(--grad); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .85rem; font-weight: 800; margin-top: .15rem;
+    }
+    .pub-authors { font-size: .85rem; color: var(--muted); margin-bottom: .25rem !important; }
+    .pub-authors .me { color: var(--text); font-weight: 700; border-bottom: 1px solid var(--muted); }
+    .pub-authors .eq { color: var(--red); font-weight: 700; }
+    .pub-status {
+      display: inline-block; margin-bottom: .75rem;
+      background: #fff7ed; color: #c2410c; border-radius: 999px;
+      padding: .12rem .6rem; font-size: .7rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .05em;
+    }
+    .pub-points { list-style: none; display: grid; gap: .45rem; }
+    .pub-points li {
+      font-size: .87rem; color: var(--muted); line-height: 1.55;
+      padding-left: .9rem; position: relative;
+    }
+    .pub-points li::before {
+      content: ''; position: absolute; left: 0; top: .6em;
+      width: 5px; height: 5px; border-radius: 1px; background: var(--accent);
+    }
+    .pub-points strong { color: var(--text); font-weight: 700; }
+    @media (max-width: 700px) { .pub-card { gap: .7rem; padding: 1.15rem; } }
     .scholar-cta {
       text-align: center; margin-top: 2.5rem;
       background: var(--bg2); border: 1px dashed var(--border); border-radius: 12px; padding: 2rem;
@@ -264,6 +331,8 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 700px) {
+        .proj-metrics, .tl-card .proj-metrics { grid-template-columns: repeat(2, 1fr); }
+      .tl-logo { width: 56px; height: 56px; }
       .about-grid { grid-template-columns: 1fr; }
       .about-wide { grid-column: 1; }
       .nav-links { gap: 1rem; }
@@ -290,24 +359,37 @@
 <section id="home">
   <div class="container">
     <div class="hero">
-      <div class="hero-avatar" style="background:#161b22;">
+      <div class="hero-avatar" style="background:var(--bg2);">
         <img src="https://raw.githubusercontent.com/Syun1208/Syun1208/main/images/avata.jpg" alt="Pham Minh Long" style="width:100%;height:100%;object-fit:cover;" />
       </div>
       <h1>Pham Minh Long</h1>
-      <p class="hero-sub">
-        <span>✨ AI Solutions Architect</span> &nbsp;·&nbsp; Researcher @ ACM Lab, NYCU
+      <p class="hero-intro">
+        He is currently a <span class="pos">Master Student in Computer Science</span> at
+        <a class="org" href="https://eecsigp.nycu.edu.tw/" target="_blank">National Yang Ming Chiao Tung University (NYCU)</a>
+        and a member of <a class="org" href="https://nycu-acm.github.io/ACM_NYCU_website/" target="_blank">ACM Lab</a>,
+        under the supervision of
+        <a href="https://www.cs.nycu.edu.tw/members/detail/chingchun?locale=en" target="_blank">Prof. Ching-Chun Huang</a>.
+        Before that, he received his B.Eng. in Computer Engineering from
+        <a class="org" href="https://hcmute.edu.vn/" target="_blank">HCMC University of Technology and Education (HCMUTE)</a>,
+        graduating as <span class="pos">Valedictorian</span> of his cohort, and spent over three years building AI systems in industry as an
+        <span class="pos">AI Engineer</span> at <a class="org" href="https://unicloud.com.vn/vi/" target="_blank">Unicloud Group</a>, an
+        <span class="pos">ML Engineer</span> at <a class="org" href="https://www.linkedin.com/company/nexcel-solutions-llc/posts/?feedView=all" target="_blank">Nexcel Solutions</a>, and an
+        <span class="pos">AI Engineer II</span> at <a class="org" href="https://momo.careers/about" target="_blank">MoMo</a>.
       </p>
-      <blockquote class="hero-quote">"BE YOUR BEST SELF!"</blockquote>
 
       <div class="hero-badges">
-        <span class="tag tag-blue">🤖 LLM / AI Agent</span>
-        <span class="tag tag-purple">🔬 Multimodal Learning</span>
-        <span class="tag tag-green">☁️ MLOps / Cloud</span>
-        <span class="tag tag-orange">🔐 AI Agent Security</span>
-        <span class="tag tag-red">⚡ Distributed Systems</span>
+        <span class="tag tag-blue">🤖 LLMs</span>
+        <span class="tag tag-purple">🧠 Memory &amp; Graph Knowledge Database</span>
+        <span class="tag tag-green">📱 Edge AI</span>
+        <span class="tag tag-orange">⚙️ Agentic Harness Engineering</span>
+        <span class="tag tag-red">📈 Time Series Forecasting</span>
       </div>
 
       <div class="hero-socials">
+        <a class="social-btn sb-cv" href="https://drive.google.com/file/d/1dZNR3FhPAPDIEgHparBskfnL9v9W0ILm/view?usp=sharing" target="_blank">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2.5L17.5 8H14V4.5zM8 13h8v1.5H8V13zm0 3.5h8V18H8v-1.5zM8 9.5h3V11H8V9.5z"/></svg>
+          CV
+        </a>
         <a class="social-btn sb-github"  href="https://github.com/Syun1208" target="_blank">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
           GitHub
@@ -340,12 +422,12 @@
         <h3>📋 Basic Info</h3>
         <ul class="about-info">
           <li><strong>Name:</strong> Pham Minh Long</li>
-          <li><strong>Phone:</strong> (+84) 036 762 3811</li>
+          <li><strong>Phone:</strong> <a href="tel:+84325188106">(+84) 032 518 8106</a></li>
           <li><strong>Email:</strong> <a href="mailto:phamlong12082001@gmail.com">phamlong12082001@gmail.com</a></li>
           <li><strong>Languages:</strong> Vietnamese, English (IELTS 7.5)</li>
           <li><strong>Location:</strong> Ho Chi Minh City, Vietnam</li>
           <li><strong>Lab:</strong> <a href="https://nycu-acm.github.io/ACM_NYCU_website/" target="_blank">ACM Lab, NYCU</a></li>
-          <li><strong>Research:</strong> LLM · AI Agent Security · Multimodal Learning · Distributed Systems</li>
+          <li><strong>Research:</strong> LLMs, Memory &amp; Graph Knowledge Database, Edge AI, Agentic Harness Engineering, Time Series Forecasting</li>
         </ul>
       </div>
 
@@ -355,17 +437,17 @@
         <div class="edu-item">
           <div>
             <h4>National Yang Ming Chiao Tung University</h4>
-            <p>Master's student · <a href="https://nycu-acm.github.io/ACM_NYCU_website/" target="_blank" style="color:var(--accent)">ACM Lab</a></p>
+            <p>Master's student at <a href="https://nycu-acm.github.io/ACM_NYCU_website/" target="_blank" style="color:var(--accent)">ACM Lab</a></p>
             <span class="gpa-badge">In Progress</span>
           </div>
-          <span class="edu-date">2024 – present</span>
+          <span class="edu-date">2026 – present</span>
         </div>
         <hr style="border-color:var(--border);margin:1rem 0"/>
         <div class="edu-item">
           <div>
             <h4>HCMC University of Technology and Education</h4>
-            <p>B.Eng. Computer Engineering · Valedictorian</p>
-            <span class="gpa-badge">GPA 3.25/4.00 · Top 1/60</span>
+            <p>B.Eng. Computer Engineering, Valedictorian</p>
+            <span class="gpa-badge">GPA 3.25/4.00 (Top 1/60)</span>
           </div>
           <span class="edu-date">Aug 2019 – Sep 2023</span>
         </div>
@@ -447,6 +529,33 @@
     <p style="color:var(--muted);margin-bottom:2rem;font-size:.9rem">🚀 <strong style="color:var(--text)">3+ years</strong> of AI/ML engineering across fintech, cloud, and software product companies.</p>
     <div class="timeline">
 
+      <!-- ACM Lab -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-company">
+              <img class="tl-logo contain" src="images/nycu.png" alt="ACM Lab, NYCU"/>
+              <div>
+                <h3>ACM Lab, NYCU</h3>
+                <p>Research Assistant</p>
+              </div>
+            </div>
+            <span class="tl-date">Feb 2026 – Now</span>
+          </div>
+          <ul class="tl-bullets">
+            <li>Develop the first baseline of <strong>Analog Circuit Migration</strong> using OpenClaw for <strong>TSMC</strong>, Taiwan</li>
+            <li>Research <strong>Decoding-time Alignment</strong> for <strong>E-Sun Bank</strong>, Taiwan</li>
+            <li>Supervised by <a href="https://www.cs.nycu.edu.tw/members/detail/chingchun?locale=en" target="_blank" style="color:var(--accent);text-decoration:none">Prof. Ching-Chun Huang</a></li>
+          </ul>
+          <div style="margin-top:.75rem">
+            <span class="tag tag-purple">Research</span><span class="tag tag-green">Open Claw</span>
+            <span class="tag tag-orange">PyTorch</span><span class="tag tag-blue">C++</span>
+            <span class="tag tag-blue">Swift</span>
+          </div>
+        </div>
+      </div>
+
       <!-- MoMo -->
       <div class="tl-item">
         <div class="tl-dot"></div>
@@ -456,7 +565,7 @@
               <img class="tl-logo" src="https://raw.githubusercontent.com/Syun1208/Syun1208/main/images/momo-file-240411162904.svg" alt="MoMo" onerror="this.src='https://img.shields.io/badge/M-A50064?style=flat-square'"/>
               <div>
                 <h3>MoMo</h3>
-                <p>Middle AI Engineer</p>
+                <p>AI Engineer II</p>
               </div>
             </div>
             <span class="tl-date">Jun 2025 – Mar 2026</span>
@@ -466,8 +575,14 @@
             <li>Enhanced <strong>Mimir Chatbot Platform</strong> — automated report generation, SQL/Chart/Insights using <strong>LangGraph + Deep Research pattern</strong> within 2 months</li>
             <li>Implemented Jira-automated assignment via LangGraph for MoMo Data Scientists and employees</li>
             <li>Integrated MCP Server and optimized historical conversation usage; weekly monitoring via Grafana + LangFuse</li>
-            <li><strong>Performance:</strong> Knowledge Retention 0.98 · Turn Relevancy 0.74 · LLM-based SQL Accuracy 0.64 · P90 75.2s</li>
           </ul>
+          <div class="proj-metrics">
+            <div class="metric"><span class="metric-val">0.98</span><span class="metric-key">Knowledge Retention</span></div>
+            <div class="metric"><span class="metric-val">0.74</span><span class="metric-key">Turn Relevancy</span></div>
+            <div class="metric"><span class="metric-val">0.64</span><span class="metric-key">SQL Accuracy</span></div>
+            <div class="metric"><span class="metric-val">0.64</span><span class="metric-key">Chart Accuracy</span></div>
+            <div class="metric"><span class="metric-val">75.2s</span><span class="metric-key">P90 Latency</span></div>
+          </div>
           <div style="margin-top:.75rem">
             <span class="tag tag-purple">LangGraph</span><span class="tag tag-purple">LangChain</span>
             <span class="tag tag-blue">FastAPI</span><span class="tag tag-blue">Redis</span>
@@ -491,11 +606,11 @@
             </div>
             <span class="tl-date">Aug 2023 – Jun 2025</span>
           </div>
-          <div class="prize-badge" style="background:rgba(129,140,248,.15);color:var(--accent2)">⭐ 2× ME+ · 1× EE Performance Ratings</div>
+          <div class="prize-badge" style="background:#f5f3ff;color:#6d28d9">⭐ 2× ME+ and 1× EE Performance Ratings</div>
           <ul class="tl-bullets">
             <li>Built <strong>Agentic RAG baseline</strong> + Web UI (Nextjs) for Betting Knowledge chatbot within 2 weeks; fine-tuned Llama-3.2-7B & Qwen2.5-7B via LoRA/PEFT</li>
             <li>Designed <strong>multi-agent Report Entity Recognition</strong> system with Telegram integration</li>
-            <li>Analyzed & adjusted <strong>XGBoost loss function</strong> for Customer Time-Series Prediction (0.35 TP · 0.92 TN)</li>
+            <li>Analyzed & adjusted <strong>XGBoost loss function</strong> for Customer Time-Series Prediction</li>
             <li>Pioneered CI/CD pipeline with multi-stage Dockerfiles, Airflow scheduling, Portainer management</li>
             <li>Webiometric Data Streaming: Kafka → MySQL (SP + schema design) from Taiwan producer</li>
           </ul>
@@ -525,8 +640,14 @@
           <ul class="tl-bullets">
             <li>Designed and improved <strong>Unicloud eKYC ID Card Verification</strong> system — YOLOv5/v7/v8 for 4-corner detection, PaddleOCR for information extraction</li>
             <li>Added orientation correction without models to enhance inference time and accuracy</li>
-            <li><strong>Performance:</strong> 64 fps · 0.87 mAP@50 · 0.94 mAP50-95 · 0.89 F1-score · 1.67 MB Docker image</li>
           </ul>
+          <div class="proj-metrics">
+            <div class="metric"><span class="metric-val">64</span><span class="metric-key">FPS</span></div>
+            <div class="metric"><span class="metric-val">0.87</span><span class="metric-key">mAP 50</span></div>
+            <div class="metric"><span class="metric-val">0.94</span><span class="metric-key">mAP 50-95</span></div>
+            <div class="metric"><span class="metric-val">0.89</span><span class="metric-key">F1-score</span></div>
+            <div class="metric"><span class="metric-val">1.67 MB</span><span class="metric-key">Docker Image</span></div>
+          </div>
           <div style="margin-top:.75rem">
             <span class="tag tag-orange">YOLOv8</span><span class="tag tag-orange">PaddleOCR</span>
             <span class="tag tag-blue">FastAPI</span><span class="tag tag-green">Docker</span>
@@ -537,11 +658,11 @@
 
       <!-- UTE-AI Lab -->
       <div class="tl-item">
-        <div class="tl-dot" style="background:var(--muted)"></div>
+        <div class="tl-dot" style="background:var(--orange)"></div>
         <div class="tl-card">
           <div class="tl-header">
             <div class="tl-company">
-              <div style="width:42px;height:42px;border-radius:8px;background:var(--bg3);display:flex;align-items:center;justify-content:center;font-size:1.2rem;border:1px solid var(--border)">🔬</div>
+              <img class="tl-logo contain" src="images/hcmute.png" alt="HCMUTE — UTE-AI Lab"/>
               <div>
                 <h3>UTE-AI Lab</h3>
                 <p>Research Assistant</p>
@@ -551,7 +672,7 @@
           </div>
           <ul class="tl-bullets">
             <li>Participated in numerous competitions and conferences in HCMC</li>
-            <li>Tracked state-of-the-art AI research trends under PhD. Tran Vu Hoang</li>
+            <li>Tracked state-of-the-art AI research trends under <a href="https://scholar.google.com/citations?user=qJ7mWjoAAAAJ&amp;hl=en" target="_blank" style="color:var(--accent);text-decoration:none">Tran Vu Hoang, Ph.D.</a></li>
           </ul>
         </div>
       </div>
@@ -571,10 +692,14 @@
           <h3>🤖 Mimir Chatbot Platform</h3>
           <span class="proj-date">Jun 2025 – Mar 2026</span>
         </div>
-        <p class="proj-company">MoMo · Middle AI Engineer · Team Size: 3</p>
+        <p class="proj-company">MoMo — AI Engineer II (Team of 3)</p>
         <p class="proj-desc">Enhanced internal chatbot with LangGraph Deep Research pattern for automated SQL, Chart, and Insights generation. Integrated MCP Server and Jira automation.</p>
         <div class="proj-metrics">
-          KR: 0.98 · TR: 0.74 · SQL: 0.64 · Chart: 0.64 · P90: 75.2s
+          <div class="metric"><span class="metric-val">0.98</span><span class="metric-key">Knowledge Retention</span></div>
+          <div class="metric"><span class="metric-val">0.74</span><span class="metric-key">Turn Relevancy</span></div>
+          <div class="metric"><span class="metric-val">0.64</span><span class="metric-key">SQL Accuracy</span></div>
+          <div class="metric"><span class="metric-val">0.64</span><span class="metric-key">Chart Accuracy</span></div>
+          <div class="metric"><span class="metric-val">75.2s</span><span class="metric-key">P90 Latency</span></div>
         </div>
         <div>
           <span class="tag tag-purple">LangGraph</span><span class="tag tag-blue">FastAPI</span>
@@ -587,7 +712,7 @@
           <h3>🏷️ Report Entity Recognition</h3>
           <span class="proj-date">Feb – Jun 2025</span>
         </div>
-        <p class="proj-company">Nexcel Solutions · Junior ML Engineer · Team Size: 2</p>
+        <p class="proj-company">Nexcel Solutions — Junior ML Engineer (Team of 2)</p>
         <p class="proj-desc">Multi-agent system for multi-report generation across departments. Fine-tuned Qwen2.5-7B with bidirectional transformer for entity & span recognition.</p>
         <div>
           <span class="tag tag-purple">Qwen2.5-7B</span><span class="tag tag-orange">Ollama</span>
@@ -603,10 +728,12 @@
           <h3>💬 Domain Chatbot – Betting Knowledge</h3>
           <span class="proj-date">Dec 2024 – Jun 2025</span>
         </div>
-        <p class="proj-company">Nexcel Solutions · Junior ML Engineer · Team Size: 2</p>
+        <p class="proj-company">Nexcel Solutions — Junior ML Engineer (Team of 2)</p>
         <p class="proj-desc">Agentic RAG baseline + Web UI within 1 week. Fine-tuned Llama-3.2-7B & Qwen2.5-7B via LoRA/PEFT on internal betting knowledge.</p>
         <div class="proj-metrics">
-          Precision: 0.74 · Faithfulness: 0.89 · Relevancy: 0.67
+          <div class="metric"><span class="metric-val">0.74</span><span class="metric-key">Precision</span></div>
+          <div class="metric"><span class="metric-val">0.89</span><span class="metric-key">Faithfulness</span></div>
+          <div class="metric"><span class="metric-val">0.67</span><span class="metric-key">Relevancy</span></div>
         </div>
         <div>
           <span class="tag tag-orange">Llama-3.2-7B</span><span class="tag tag-orange">vLLM</span>
@@ -619,39 +746,32 @@
           <h3>📈 Customer Performance Prediction</h3>
           <span class="proj-date">Jun – Dec 2024</span>
         </div>
-        <p class="proj-company">Nexcel Solutions · Junior ML Engineer · Team Size: 2</p>
+        <p class="proj-company">Nexcel Solutions — Junior ML Engineer (Team of 2)</p>
         <p class="proj-desc">Time-series RFM model for Taiwan punters' daily performance. Adapted XGBoost loss function for company winloss. Applied active learning &amp; unsupervised domain adaptation.</p>
-        <div class="proj-metrics">TP: 0.35 · TN: 0.92</div>
+        <div class="proj-metrics">
+          <div class="metric"><span class="metric-val">0.35</span><span class="metric-key">True Positive</span></div>
+          <div class="metric"><span class="metric-val">0.92</span><span class="metric-key">True Negative</span></div>
+        </div>
         <div>
           <span class="tag tag-purple">XGBoost</span><span class="tag tag-purple">K-Means</span>
           <span class="tag tag-blue">RFM Model</span><span class="tag tag-blue">UMAP</span>
         </div>
       </div>
 
-      <div class="proj-card">
-        <div class="proj-header">
-          <h3>🎥 Text-Video Retrieval</h3>
-          <span class="proj-date">Jul – Oct 2023</span>
-        </div>
-        <p class="proj-company">HCMC AI Challenge 2023 · Leader · Team Size: 5</p>
-        <p class="proj-desc">Multi-modal search engine: top-k retrieval from video/image/text using CLIP, ASR, Image Captioning, OCR for feature extraction and cosine similarity.</p>
-        <div>
-          <span class="tag tag-purple">CLIP</span><span class="tag tag-purple">BERT</span>
-          <span class="tag tag-red">Faiss</span><span class="tag tag-red">Elasticsearch</span>
-          <span class="tag tag-blue">FastAPI</span>
-        </div>
-      </div>
-
-      <div class="proj-card">
+<div class="proj-card">
         <div class="proj-header">
           <h3>📱 Smart Menu Application</h3>
           <span class="proj-date">Feb – Jun 2023</span>
         </div>
-        <p class="proj-company">Graduation Project · Researcher · Team Size: 1</p>
+        <p class="proj-company">Graduation Project — Researcher (Solo)</p>
         <p class="proj-desc">Mobile app: Menu Scanner (PaddleOCR + C++ core), Machine Translation (RetNet/Transformer), Recommendation (NeuMF + Collaborative Filtering), RASA chatbot.</p>
         <div>
           <span class="tag tag-blue">Java</span><span class="tag tag-orange">PaddleOCR</span>
           <span class="tag tag-purple">BERT</span><span class="tag tag-green">GCP</span>
+        </div>
+        <div class="proj-links" style="margin-top:.75rem">
+          <a class="proj-link" href="https://github.com/Syun1208/smart-menu-application" target="_blank"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+          <a class="proj-link" href="https://www.youtube.com/watch?v=1AApTKtQTlY" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> Demo</a>
         </div>
       </div>
 
@@ -660,29 +780,21 @@
           <h3>🪪 ID Card Verification – eKYC</h3>
           <span class="proj-date">Feb 2022 – Aug 2023</span>
         </div>
-        <p class="proj-company">Unicloud Group · AI Engineer · Team Size: 5</p>
+        <p class="proj-company">Unicloud Group — AI Engineer (Team of 5)</p>
         <p class="proj-desc">Improved eKYC system with YOLOv5/v7/v8 for 4-corner detection, perspective transform for ROI extraction, PaddleOCR for text extraction.</p>
-        <div class="proj-metrics">64 fps · mAP@50: 0.87 · F1: 0.89 · Image: 1.67 MB</div>
+        <div class="proj-metrics">
+          <div class="metric"><span class="metric-val">64</span><span class="metric-key">FPS</span></div>
+          <div class="metric"><span class="metric-val">0.87</span><span class="metric-key">mAP 50</span></div>
+          <div class="metric"><span class="metric-val">0.89</span><span class="metric-key">F1-score</span></div>
+          <div class="metric"><span class="metric-val">1.67 MB</span><span class="metric-key">Image Size</span></div>
+        </div>
         <div>
           <span class="tag tag-orange">YOLOv8</span><span class="tag tag-orange">PaddleOCR</span>
           <span class="tag tag-green">Docker</span>
         </div>
       </div>
 
-      <div class="proj-card">
-        <div class="proj-header">
-          <h3>🚗 Autonomous Car – CV &amp; DL</h3>
-          <span class="proj-date">Sep – Nov 2022</span>
-        </div>
-        <p class="proj-company">UIT Racing Car 2023 · Leader · Team Size: 4</p>
-        <p class="proj-desc">UNET 3+ / BiseNet lane segmentation with PID controller. YOLOv4-tiny/v7/v8 traffic sign detection. Simulated on Unity, embedded on Jetson Nano.</p>
-        <div>
-          <span class="tag tag-orange">YOLOv8</span><span class="tag tag-orange">UNET 3+</span>
-          <span class="tag tag-blue">Jetson Nano</span><span class="tag tag-blue">Unity</span>
-        </div>
-      </div>
-
-    </div>
+</div>
   </div>
 </section>
 
@@ -695,19 +807,19 @@
       <div class="award-card">
         <div class="award-icon">🥈</div>
         <h4>Top 2 Innovation Product Prize</h4>
-        <p>MoMo · 2025 — Mimir Chatbot Platform enhancement for Deep Research & automated reporting</p>
+        <p>MoMo, 2025 — Mimir Chatbot Platform enhancement for Deep Research & automated reporting</p>
       </div>
       <div class="award-card">
         <div class="award-icon">🎓</div>
         <h4>Valedictorian – Computer Engineering</h4>
-        <p>HCMUTE K19 · 2023 — Top 1/60, GPA 3.25/4.00 (8.21/10.00)</p>
+        <p>HCMUTE K19, 2023 — Top 1/60, GPA 3.25/4.00 (8.21/10.00)</p>
       </div>
       <div class="award-card">
         <div class="award-icon">⭐</div>
         <h4>EE Performance Rating</h4>
         <p>Nexcel Solutions — Exceeding Expectations, alongside 2× ME+ ratings</p>
       </div>
-      <div class="award-card">
+      <!-- <div class="award-card">
         <div class="award-icon">🏁</div>
         <h4>HCMC AI Challenge 2023</h4>
         <p>Leader – Text-Video Retrieval system, top competition in Ho Chi Minh City</p>
@@ -721,65 +833,26 @@
         <div class="award-icon">🌐</div>
         <h4>IELTS 7.5</h4>
         <p>English proficiency — International English Language Testing System</p>
-      </div>
+      </div> -->
     </div>
 
     <!-- Certifications -->
     <div class="cert-section">
-      <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:1.5rem">🏅 Certifications</h3>
+      <h3 style="font-family:var(--serif);font-size:1.3rem;font-weight:700;margin-bottom:1.5rem">🏅 Certifications</h3>
 
       <!-- AWS Certs -->
       <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center;margin-bottom:1.5rem">
         <div style="text-align:center">
-          <img src="https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png" width="100" style="border-radius:8px"/>
-          <p style="font-size:.8rem;color:var(--muted);margin-top:.4rem;max-width:130px">Solutions Architect Associate</p>
+          <img src="https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png" width="175" style="border-radius:12px"/>
+          <p style="font-size:.82rem;color:var(--muted);margin-top:.5rem;max-width:190px;line-height:1.4">Solutions Architect Associate</p>
         </div>
         <div style="text-align:center">
-          <img src="https://img-c.udemycdn.com/open-badges/v2/badge-class/2042649863/56a4f532-ea3f-4747-88df-ba9e93755e5713452559103964002541.png" width="100" style="border-radius:8px"/>
-          <p style="font-size:.8rem;color:var(--muted);margin-top:.4rem;max-width:130px">Machine Learning Engineer Associate</p>
+          <img src="https://img-c.udemycdn.com/open-badges/v2/badge-class/2042649863/56a4f532-ea3f-4747-88df-ba9e93755e5713452559103964002541.png" width="175" style="border-radius:12px"/>
+          <p style="font-size:.82rem;color:var(--muted);margin-top:.5rem;max-width:190px;line-height:1.4">Machine Learning Engineer Associate</p>
         </div>
         <div style="text-align:center">
-          <img src="https://images.credly.com/size/340x340/images/f0d3fbb9-bfa7-4017-9989-7bde8eaf42b1/image.png" width="100" style="border-radius:8px"/>
-          <p style="font-size:.8rem;color:var(--muted);margin-top:.4rem;max-width:130px">SysOps Administrator (CloudOps) Associate</p>
-        </div>
-      </div>
-
-      <div class="cert-grid">
-        <div class="cert-item">
-          <img class="cert-logo" src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="PyTorch"/>
-          <div class="cert-info"><h4>Deep Learning with PyTorch: Siamese Network</h4><p>Coursera</p></div>
-        </div>
-        <div class="cert-item">
-          <img class="cert-logo" src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="PyTorch"/>
-          <div class="cert-info"><h4>Deep Learning with PyTorch: GAN</h4><p>Coursera</p></div>
-        </div>
-        <div class="cert-item">
-          <img class="cert-logo" src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="PyTorch"/>
-          <div class="cert-info"><h4>Deep Learning with PyTorch: Neural Style Transfer</h4><p>Coursera</p></div>
-        </div>
-        <div class="cert-item">
-          <img class="cert-logo" src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="PyTorch"/>
-          <div class="cert-info"><h4>Deep Learning with PyTorch: Object Localization</h4><p>Coursera</p></div>
-        </div>
-        <div class="cert-item">
-          <img class="cert-logo" src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="PyTorch"/>
-          <div class="cert-info"><h4>Deep Learning with PyTorch: GradCAM</h4><p>Coursera</p></div>
-        </div>
-        <div class="cert-item">
-          <img class="cert-logo" src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="PyTorch"/>
-          <div class="cert-info"><h4>Convolutional Neural Networks</h4><p>Coursera</p></div>
-        </div>
-        <div class="cert-item">
-          <img class="cert-logo" src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="PyTorch"/>
-          <div class="cert-info"><h4>Facial Expression Recognition with PyTorch</h4><p>Coursera</p></div>
-        </div>
-        <div class="cert-item">
-          <img class="cert-logo" src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="PyTorch"/>
-          <div class="cert-info"><h4>Aerial Image Segmentation with PyTorch</h4><p>Coursera</p></div>
-        </div>
-        <div class="cert-item">
-          <img class="cert-logo" src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="PyTorch"/>
-          <div class="cert-info"><h4>Deep Learning with PyTorch: Image Segmentation</h4><p>Coursera</p></div>
+          <img src="https://images.credly.com/size/340x340/images/f0d3fbb9-bfa7-4017-9989-7bde8eaf42b1/image.png" width="175" style="border-radius:12px"/>
+          <p style="font-size:.82rem;color:var(--muted);margin-top:.5rem;max-width:190px;line-height:1.4">SysOps Administrator (CloudOps) Associate</p>
         </div>
       </div>
     </div>
@@ -791,10 +864,45 @@
   <div class="container">
     <h2 class="section-title">Publications</h2>
 
+    <p class="pub-note">* Equal Contribution</p>
+
     <div class="pub-card">
-      <h3>Research in Progress – ACM Lab, NYCU</h3>
-      <p>Currently conducting research at ACM Lab, National Yang Ming Chiao Tung University (NYCU) on topics including LLM, AI Agent Security, Multimodal Learning, and Distributed Systems.</p>
-      <span class="pub-venue">ACM Lab, NYCU · 2024 – present</span>
+      <span class="pub-num">1</span>
+      <div>
+        <p class="pub-authors"><span class="me">Minh-Long Pham</span>, Ching-Chun Huang</p>
+        <h3>TRACE: Truthfulness Regulated Alignment through Corrected Estimation</h3>
+        <span class="pub-status">In progress</span>
+        <ul class="pub-points">
+          <li><strong>Problem</strong> — Training-free alignment such as OPAD follows a user-defined system prompt, but reshaping the output distribution causes hallucination and over-steering.</li>
+          <li><strong>Approach</strong> — Entropy-aware token selection against hallucination and Dynamic Rejection against over-steering, without fine-tuning the base model.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pub-card">
+      <span class="pub-num">2</span>
+      <div>
+        <p class="pub-authors"><span class="me">Minh-Long Pham</span>, Ching-Chun Huang</p>
+        <h3>TAMiOS: Transformer-embedded Agentic Multi-agent System for iOS</h3>
+        <span class="pub-status">In progress</span>
+        <ul class="pub-points">
+          <li><strong>Problem</strong> — Agentic frameworks assume server-side orchestration; on-device, every planning, routing and tool-calling step competes for the same NPU and memory budget.</li>
+          <li><strong>Approach</strong> — On-device planner with specialist agents over MLX, native tools (speech, location, camera), and a memory- and thermal-aware scheduler, fully local.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pub-card">
+      <span class="pub-num">3</span>
+      <div>
+        <p class="pub-authors">Minh-Tu Cao<span class="eq">*</span>, Khanh-Nhan Tran<span class="eq">*</span>, <span class="me">Minh-Long Pham</span></p>
+        <h3>RAILIGHT: A Robust Illumination-Adaptive Framework for Railway Defect Detection</h3>
+        <span class="pub-status">In progress</span>
+        <ul class="pub-points">
+          <li><strong>Problem</strong> — Railway inspection runs largely at night, but detectors trained on labelled daytime imagery degrade sharply on night footage, and re-annotating night data is costly.</li>
+          <li><strong>Approach</strong> — Unsupervised domain adaptation from labelled day to unlabelled night footage, with no night labels: <strong>0.72 mAP@50</strong> on real night footage, <strong>+0.20</strong> over the daytime-only baseline.</li>
+        </ul>
+      </div>
     </div>
 
     <div class="scholar-cta">
@@ -814,7 +922,8 @@
 
 <!-- ══════════════ FOOTER ══════════════ -->
 <footer>
-  <p>© 2025 Pham Minh Long · Built with ❤️ · <a href="mailto:phamlong12082001@gmail.com" style="color:var(--accent);text-decoration:none">phamlong12082001@gmail.com</a></p>
+  <p>© 2026 Pham Minh Long — Built with ❤️</p>
+  <p style="margin-top:.3rem"><a href="mailto:phamlong12082001@gmail.com" style="color:var(--accent);text-decoration:none">phamlong12082001@gmail.com</a></p>
 </footer>
 
 <script>
@@ -833,7 +942,7 @@
   sections.forEach(s => observer.observe(s));
 
   // Fade-in on scroll
-  const cards = document.querySelectorAll('.tl-card, .proj-card, .award-card, .cert-item, .pub-card');
+  const cards = document.querySelectorAll('.tl-card, .proj-card, .award-card, .pub-card');
   const fadeObs = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
